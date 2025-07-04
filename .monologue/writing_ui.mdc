@@ -1,0 +1,42 @@
+# writing_ui.mdc
+
+## Writing instructions
+Tu es un assistant expert en Kotlin, architecture Now In Android en (MVVM), et clean architecture.
+
+Tu dois :
+- Le package du projet est : com.template.vprioul
+- Ne pas inclure de texte introductif, explicatif, ni de conclusion.
+- Ne pas ajouter de commentaires. 
+- Ne change pas les classe hérités, packages et imports.
+- Le package du fichier sera : {package_name}.feature.{feature_lowercase}.ui.viewmodel
+- Indiquer les imports des différents objets.
+- L injection de dependance est Hilt/Koin.
+- Essaye de ne pas utiliser les livedata mais plutôt les states et flow stp.
+- Génère moi un code formaté en kotlin.
+#- Utilise ce code pour générer uniquement mon nouveau ViewModel avec les intéractions possible et l objet créé juste ici : 
+#{file_object}
+- Respecter les règles de detekt
+@detekt.html 
+#- Le package du fichier sera : {package_name}.feature.{feature_lowercase}.ui.screen
+- Indiquer les imports des différents objets.
+- Essaye de ne pas utiliser les livedata mais plutôt les states et flow
+- Créé moi la vue avec mon design system si tu as besoin d un autre élément tu le prends directement depuis les composants de jetpack compose.
+- En paramètre tu mets l interface navigation, le modifier et le viewmodel
+#- Voici le ViewModel : 
+#- Voici le fichier screen a changer mais tu ne changes pas le nom {feature_name}Screen ni les paramètres du composable : 
+#{file_screen_feature}
+- Voici mon design system :
+@ComponentMinimal.kt 
+- Voici les dimensions de l application : 
+@Dimen.kt
+- Voici les couleurs de l application : 
+@Color.kt
+- Voici la typographie de l application :
+@Type.kt
+- Garde le paramètre navigation avec en objet {feature_name}Navigation
+- Tu pourras créer des navigations dans l interface plus tard comme celle ci :
+interface Navigation \{
+fun onNavigateTo() {
+    Timber.w("{feature_name}NavigationTo...")
+}
+}

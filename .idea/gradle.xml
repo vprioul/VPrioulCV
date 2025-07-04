@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/build-logic" name="build-logic">
+                <projects>
+                  <project path="$PROJECT_DIR$/build-logic" />
+                  <project path="$PROJECT_DIR$/build-logic/convention" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/build-logic" />
+            <option value="$PROJECT_DIR$/build-logic/convention" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/data" />
+            <option value="$PROJECT_DIR$/core/designsystem" />
+            <option value="$PROJECT_DIR$/core/domain" />
+            <option value="$PROJECT_DIR$/core/resources" />
+            <option value="$PROJECT_DIR$/core/ui" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/contact" />
+            <option value="$PROJECT_DIR$/feature/contact/data" />
+            <option value="$PROJECT_DIR$/feature/contact/domain" />
+            <option value="$PROJECT_DIR$/feature/contact/ui" />
+            <option value="$PROJECT_DIR$/feature/education" />
+            <option value="$PROJECT_DIR$/feature/education/data" />
+            <option value="$PROJECT_DIR$/feature/education/domain" />
+            <option value="$PROJECT_DIR$/feature/education/ui" />
+            <option value="$PROJECT_DIR$/feature/experience" />
+            <option value="$PROJECT_DIR$/feature/experience/data" />
+            <option value="$PROJECT_DIR$/feature/experience/domain" />
+            <option value="$PROJECT_DIR$/feature/experience/ui" />
+            <option value="$PROJECT_DIR$/feature/hobbies" />
+            <option value="$PROJECT_DIR$/feature/hobbies/data" />
+            <option value="$PROJECT_DIR$/feature/hobbies/domain" />
+            <option value="$PROJECT_DIR$/feature/hobbies/ui" />
+            <option value="$PROJECT_DIR$/feature/home" />
+            <option value="$PROJECT_DIR$/feature/home/data" />
+            <option value="$PROJECT_DIR$/feature/home/domain" />
+            <option value="$PROJECT_DIR$/feature/home/ui" />
+            <option value="$PROJECT_DIR$/feature/login" />
+            <option value="$PROJECT_DIR$/feature/login/data" />
+            <option value="$PROJECT_DIR$/feature/login/domain" />
+            <option value="$PROJECT_DIR$/feature/login/ui" />
+            <option value="$PROJECT_DIR$/feature/skills" />
+            <option value="$PROJECT_DIR$/feature/skills/data" />
+            <option value="$PROJECT_DIR$/feature/skills/domain" />
+            <option value="$PROJECT_DIR$/feature/skills/ui" />
+            <option value="$PROJECT_DIR$/feature/splash" />
+            <option value="$PROJECT_DIR$/feature/splash/data" />
+            <option value="$PROJECT_DIR$/feature/splash/domain" />
+            <option value="$PROJECT_DIR$/feature/splash/ui" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

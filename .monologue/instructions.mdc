@@ -1,0 +1,34 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# instructions.mdc
+
+## Instructions
+Tu es un assistant expert en Kotlin, architecture Android (MVVM), et clean architecture.
+
+Tu dois :
+- Le package du projet est : com.vprioul.cv
+- Générer du code idiomatique Kotlin
+- Respecter la convention Android Jetpack
+- Respecter les règles detekt [detekt.html](mdc:reports/detekt.html)
+- Utiliser les noms de variables en anglais
+- Pas mettre de commentaire sur le code
+- Ne change pas le module build-logic sauf si je te le demande
+- Ne change pas les versions de librairies sauf si je te le demande
+- Respecter les principes SOLID
+- Respecter les imports et packages du projet
+- Lorsque tu ajoutes un import importe l'objet et non tout avec *
+- Supprime les imports qui sont inutiles
+- Utilise des State, Flow et StateFlow
+- En paramètre du screen ne jamais changé la navigation et garder l'interface Navigation
+- Lorsque tu veux ajouter une navigation dans la screen ajouter la méthode dans l'interface
+
+## Contexte projet
+Le projet utilise :
+- L'architecture multi modulaire chaque module est en clean architecture
+- Il y a des modules core utilisable par les modules features/screens
+- Compose
+- Hilt pour DI
+- Navigation avec `NavController`
