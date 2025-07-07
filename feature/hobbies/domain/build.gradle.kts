@@ -8,5 +8,6 @@ android {
 
 dependencies {
     implementation(projects.feature.hobbies.data)
+    implementation(libs.play.services.maps)
     //Modules only Data or Domain
 }

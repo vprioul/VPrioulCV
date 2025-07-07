@@ -36,6 +36,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.GoogleMap
 import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
+import com.google.maps.android.compose.Polyline
 import com.google.maps.android.compose.rememberCameraPositionState
 import com.vprioul.cv.core.designsystem.component.MinimalText
 import com.vprioul.cv.core.designsystem.theme.DpLarge
@@ -87,14 +88,22 @@ fun HobbiesScreen(
             }
         ) {
             uiState.visitedCountries.forEach { country ->
-                Marker(
-                    state = MarkerState(
-                        position = LatLng(
-                            country.latitude,
-                            country.longitude
-                        )
-                    ),
-                    title = stringResource(country.name)
+                val route: List<LatLng> = country.listCityData.map { it.location }
+                country.listCityData.forEach { place ->
+                    Marker(
+                        state = MarkerState(
+                            position = LatLng(
+                                place.location.latitude,
+                                place.location.longitude
+                            )
+                        ),
+                        title = place.name
+                    )
+                }
+                Polyline(
+                    points = route,
+                    color = MaterialTheme.colorScheme.error,
+                    width = 8f
                 )
             }
         }

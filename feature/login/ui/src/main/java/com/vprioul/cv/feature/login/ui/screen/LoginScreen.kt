@@ -32,6 +32,7 @@ import com.vprioul.cv.core.designsystem.component.MinimalText
 import com.vprioul.cv.core.designsystem.component.MinimalTextField
 import com.vprioul.cv.core.designsystem.theme.DpLarge
 import com.vprioul.cv.core.designsystem.theme.DpMedium
+import com.vprioul.cv.feature.login.ui.state.LoginState
 
 @Composable
 fun LoginScreen(
@@ -41,10 +42,13 @@ fun LoginScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    val retrieveLogin = stringResource(R.string.login_retrieve_login)
 
-    LaunchedEffect(uiState.isSuccess) {
-        if (uiState.isSuccess) {
+    LaunchedEffect(uiState.loginState) {
+        if (uiState.loginState == LoginState.Success) {
             navigation.onNavigateToHome()
+        } else if (uiState.loginState == LoginState.Error) {
+            Toast.makeText(context, retrieveLogin, Toast.LENGTH_LONG).show()
         }
     }
     Box(modifier = modifier) {
@@ -86,16 +90,12 @@ fun LoginScreen(
                 ),
             )
 
-            val retrieveLogin = stringResource(R.string.login_retrieve_login)
+            val login = stringResource(R.string.vincent)
+            val password = stringResource(R.string.prioul)
             MinimalButton(
                 text = stringResource(R.string.validate),
                 onClick = {
-                    viewModel.onClicked()
-                    if (uiState.isSuccess) {
-                        navigation.onNavigateToHome()
-                    } else {
-                        Toast.makeText(context, retrieveLogin, Toast.LENGTH_LONG).show()
-                    }
+                    viewModel.onClicked(login, password)
                 }
             )
 

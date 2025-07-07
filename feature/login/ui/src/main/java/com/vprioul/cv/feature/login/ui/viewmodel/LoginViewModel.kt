@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vprioul.cv.core.ui.IntentManagerUi
 import com.vprioul.cv.feature.login.ui.BuildConfig
+import com.vprioul.cv.feature.login.ui.state.LoginState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,20 +21,25 @@ class LoginViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(LoginUiState())
     val uiState: StateFlow<LoginUiState> = _uiState.asStateFlow()
 
-    fun onClicked() {
+    fun onClicked(login: String, password: String) {
         viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(loginState = LoginState.Loading)
             when {
-                _uiState.value.login.equals("vincent", ignoreCase = true) &&
+                _uiState.value.login.equals(login, ignoreCase = true) &&
                         _uiState.value.password.equals(
-                    "prioul",
+                    password,
                     ignoreCase = true
                 ) -> {
-                    _uiState.value = _uiState.value.copy(isSuccess = true)
+                    _uiState.value = _uiState.value.copy(loginState = LoginState.Success)
                 }
 
                 _uiState.value.login == BuildConfig.LOGIN &&
                         _uiState.value.password == BuildConfig.PASSWORD -> {
-                    _uiState.value = _uiState.value.copy(isSuccess = true)
+                    _uiState.value = _uiState.value.copy(loginState = LoginState.Success)
+                }
+
+                else -> {
+                    _uiState.value = _uiState.value.copy(loginState = LoginState.Error)
                 }
             }
         }
@@ -55,5 +61,5 @@ class LoginViewModel @Inject constructor(
 data class LoginUiState(
     val login: String = "",
     val password: String = "",
-    val isSuccess: Boolean = false
+    val loginState: LoginState = LoginState.Idle
 )

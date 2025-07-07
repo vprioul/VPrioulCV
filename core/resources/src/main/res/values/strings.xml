@@ -21,6 +21,8 @@
     <!-- Login -->
     <string name="login_name">Identifiant</string>
     <string name="login_password">Mot de passe</string>
+    <string name="vincent">Vincent</string>
+    <string name="prioul">Prioul</string>
     <string name="login_error">Erreur du login ou mot de passe, veuillez demander à Vincent Prioul ou chercher sur le repo Git Hub si vous trouvez le mot de passe</string>
     <string name="login_retrieve_login">Veuillez demander à Vincent Prioul ou chercher sur le repo Git Hub si vous trouvez le mot de passe</string>
     <string name="login_link_project">Projet Git Hub</string>
@@ -284,6 +286,8 @@
     <string name="hobbies_travel_england">Angleterre</string>
     <string name="hobbies_travel_portugal">Portugal</string>
     <string name="hobbies_travel_usa">États-Unis</string>
+    <string name="hobbies_travel_marocco">Maroc</string>
+    <string name="hobbies_travel_french">France</string>
     <string name="hobbies_travel_autria">Autriche</string>
     <string name="hobbies_travel_tcheque">République Tchèque</string>
     <string name="hobbies_travel_slovakia">Slovaquie</string>
