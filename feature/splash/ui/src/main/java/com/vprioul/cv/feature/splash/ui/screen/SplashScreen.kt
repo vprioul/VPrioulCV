@@ -43,6 +43,7 @@ fun SplashScreen(
 
         Image(
             modifier = Modifier
+                .fillMaxSize()
                 .alpha(alpha),
             painter = painterResource(R.drawable.vprioul),
             contentDescription = "Photo de profil",

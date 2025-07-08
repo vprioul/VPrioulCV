@@ -1,0 +1,469 @@
+[
+    {
+        "name": "Kotlin",
+        "masteryLevel": 100,
+        "icon": "ic_kotlin",
+        "category": "MOBILE",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Java",
+        "masteryLevel": 100,
+        "icon": "ic_java",
+        "category": "MOBILE",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "JNI",
+        "masteryLevel": 100,
+        "icon": "ic_jni",
+        "category": "MOBILE",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "ADB Android Debug Bridge",
+        "masteryLevel": 75,
+        "icon": "ic_adb",
+        "category": "MOBILE",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Android NDK",
+        "masteryLevel": 75,
+        "icon": "ic_ndk",
+        "category": "MOBILE",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Appium",
+        "masteryLevel": 75,
+        "icon": "ic_appium",
+        "category": "MOBILE",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Swift",
+        "masteryLevel": 60,
+        "icon": "ic_swift",
+        "category": "MOBILE",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Objective-C",
+        "masteryLevel": 75,
+        "icon": "ic_obj_c",
+        "category": "MOBILE",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Jetpack compose",
+        "masteryLevel": 75,
+        "icon": "ic_compose",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Room",
+        "icon": "ic_room",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Hilt",
+        "icon": "ic_hilt",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Koin",
+        "icon": "ic_koin",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Coil",
+        "icon": "ic_coil",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Glide",
+        "icon": "ic_glide",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Google Map",
+        "icon": "ic_google_map",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Google Drive",
+        "icon": "ic_google_drive",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "Mailjet",
+        "icon": "ic_mailjet",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+        "name": "SQLite",
+        "icon": "ic_sqlite",
+        "category": "LIBRARIES",
+        "type": "TECHNICAL"
+    },
+    {
+      "name": "Git",
+      "icon": "ic_git",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Git Hub",
+      "icon": "ic_git_hub",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Jenkins",
+      "masteryLevel": 75,
+      "icon": "ic_jenkins",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Sublime Text",
+      "masteryLevel": 75,
+      "icon": "ic_sublime_text",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Cursor",
+      "masteryLevel": 75,
+      "icon": "ic_cursor",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Chat GPT",
+      "masteryLevel": 75,
+      "icon": "ic_chatgpt",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Gemini",
+      "masteryLevel": 75,
+      "icon": "ic_gemini",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Claude AI",
+      "masteryLevel": 75,
+      "icon": "ic_claude_ai",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Mistral AI",
+      "masteryLevel": 75,
+      "icon": "ic_mistral",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Deepseek",
+      "masteryLevel": 75,
+      "icon": "ic_deepseek",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Docker",
+      "masteryLevel": 75,
+      "icon": "ic_docker",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Google Chrome",
+      "masteryLevel": 75,
+      "icon": "ic_google_chrome",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Google Play",
+      "masteryLevel": 75,
+      "icon": "ic_google_play",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Jira",
+      "masteryLevel": 75,
+      "icon": "ic_jira",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Slack",
+      "masteryLevel": 75,
+      "icon": "ic_slack",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Teams",
+      "masteryLevel": 75,
+      "icon": "ic_teams",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Redmine",
+      "masteryLevel": 75,
+      "icon": "ic_redmine",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Sonar",
+      "masteryLevel": 75,
+      "icon": "ic_sonar",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "VMWare",
+      "masteryLevel": 75,
+      "icon": "ic_vm_ware",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Azure Devops",
+      "masteryLevel": 75,
+      "icon": "ic_azure_devops",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Android Development",
+      "masteryLevel": 100,
+      "icon": "ic_android",
+      "category": "PLATFORM",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Android Auto",
+      "masteryLevel": 100,
+      "icon": "ic_android_auto",
+      "category": "PLATFORM",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Android TV",
+      "masteryLevel": 100,
+      "icon": "ic_android_tv",
+      "category": "PLATFORM",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "iOS development",
+      "masteryLevel": 50,
+      "icon": "ic_ios",
+      "category": "PLATFORM",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "MacOS",
+      "masteryLevel": 100,
+      "icon": "ic_mac",
+      "category": "PLATFORM",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Linux",
+      "masteryLevel": 100,
+      "icon": "ic_linux",
+      "category": "PLATFORM",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Linux Debian",
+      "masteryLevel": 100,
+      "icon": "ic_debian",
+      "category": "PLATFORM",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Windows",
+      "masteryLevel": 100,
+      "icon": "ic_windows",
+      "category": "PLATFORM",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Visual Studio Code",
+      "masteryLevel": 75,
+      "icon": "ic_visual_studio",
+      "category": "TOOLS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Python",
+      "icon": "ic_python",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Bash",
+      "icon": "ic_bash",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "C/C++",
+      "icon": "ic_c",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "CMake",
+      "icon": "ic_cmake",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Drupal",
+      "icon": "ic_drupal",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Firefox",
+      "icon": "ic_firefox",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Safari",
+      "icon": "ic_safari",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Gherkin",
+      "icon": "ic_gherkin",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Robot Framework",
+      "icon": "ic_robot_framework",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "HTML",
+      "icon": "ic_html",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "PHP",
+      "icon": "ic_php",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Javascript",
+      "icon": "ic_js",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Symfony2",
+      "icon": "ic_symfony",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "node",
+      "icon": "ic_node",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "QT",
+      "icon": "ic_qt",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Appcelerator Titanium",
+      "icon": "ic_titanium_appcelerator",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Tizen",
+      "icon": "ic_tizen",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Windows Phone",
+      "icon": "ic_windows_phone",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "WordPress",
+      "icon": "ic_wordpress",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+    {
+      "name": "Mattermost",
+      "icon": "ic_mattermost",
+      "category": "OTHERS",
+      "type": "TECHNICAL"
+    },
+
+    {
+      "name": "Français",
+      "masteryLevel": 100,
+      "icon": "ic_french",
+      "category": "SOFT_SKILL",
+      "type": "SOFT"
+    },
+    {
+      "name": "Anglais",
+      "masteryLevel": 50,
+      "icon": "ic_england",
+      "category": "SOFT_SKILL",
+      "type": "SOFT"
+    },
+    {
+      "name": "Espagnol",
+      "masteryLevel": 33,
+      "icon": "ic_spain",
+      "category": "SOFT_SKILL",
+      "type": "SOFT"
+    },
+    {
+      "name": "Cambodgien",
+      "masteryLevel": 33,
+      "icon": "ic_cambodia",
+      "category": "SOFT_SKILL",
+      "type": "SOFT"
+    }
+]

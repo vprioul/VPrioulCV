@@ -1,52 +1,47 @@
 package com.vprioul.cv.feature.hobbies.ui.screen
 
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.wrapContentHeight
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowCircleLeft
+import androidx.compose.material.icons.filled.ArrowCircleRight
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
+import com.google.maps.android.compose.CameraPositionState
 import com.google.maps.android.compose.GoogleMap
 import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
 import com.google.maps.android.compose.Polyline
 import com.google.maps.android.compose.rememberCameraPositionState
+import com.vprioul.cv.core.designsystem.component.IconCarousel
 import com.vprioul.cv.core.designsystem.component.MinimalText
+import com.vprioul.cv.core.designsystem.theme.DpIcon
 import com.vprioul.cv.core.designsystem.theme.DpLarge
 import com.vprioul.cv.core.designsystem.theme.DpMedium
+import com.vprioul.cv.core.designsystem.theme.DpNormal
 import com.vprioul.cv.core.resources.R
 import com.vprioul.cv.feature.hobbies.domain.model.Sport
 import com.vprioul.cv.feature.hobbies.ui.viewmodel.HobbiesUiState
 import com.vprioul.cv.feature.hobbies.ui.viewmodel.HobbiesViewModel
-import kotlinx.coroutines.launch
-import kotlin.math.abs
+import kotlinx.collections.immutable.toImmutableList
 
 @Composable
 fun HobbiesScreen(
@@ -54,42 +49,127 @@ fun HobbiesScreen(
     viewModel: HobbiesViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val cameraPositionState = rememberCameraPositionState {
+        position = CameraPosition.fromLatLngZoom(
+            LatLng(46.2276, 2.2137),
+            2f
+        )
+    }
+    LaunchedEffect(uiState.selectedRoadTrip?.listCityData?.first()?.location) {
+        uiState.selectedRoadTrip?.let { country ->
+            if (country.listCityData.isNotEmpty()) {
+                cameraPositionState.animate(
+                    update = CameraUpdateFactory.newLatLngZoom(
+                        country.listCityData.first().location,
+                        9f
+                    ),
+                    durationMs = 1000
+                )
+            }
+        }
+    }
 
     Column(modifier = modifier.fillMaxSize()) {
-        MinimalText(
-            modifier = Modifier
-                .padding(vertical = DpMedium)
-                .align(Alignment.CenterHorizontally),
-            label = stringResource(R.string.hobbies_sport),
-            style = MaterialTheme.typography.titleLarge
-        )
         SportCarousel(
             uiState = uiState,
             onSportSelected = { sport ->
                 viewModel.onSportSelected(sport)
             }
         )
+
+        TravelMap(
+            uiState,
+            cameraPositionState,
+            onBackRoadTrip = {
+                viewModel.onRoadTrip(false)
+            },
+            onNextRoadTrip = {
+                viewModel.onRoadTrip(true)
+            }
+        )
+    }
+}
+
+@Composable
+fun ColumnScope.SportCarousel(
+    uiState: HobbiesUiState,
+    onSportSelected: (Sport) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    MinimalText(
+        modifier = modifier
+            .padding(vertical = DpMedium)
+            .align(Alignment.CenterHorizontally),
+        label = stringResource(R.string.hobbies_sport),
+        style = MaterialTheme.typography.titleLarge
+    )
+    IconCarousel(
+        items = uiState.sports.toImmutableList(),
+        selectedItemContent = { sport ->
+            onSportSelected(sport)
+        }
+    ) { sport, _ ->
+        Image(
+            painter = painterResource(id = sport.icon),
+            contentDescription = stringResource(sport.name),
+            modifier = Modifier.size(DpIcon),
+        )
+    }
+    uiState.selectedSport?.let { sport ->
         MinimalText(
             modifier = Modifier
-                .padding(top = DpLarge, bottom = DpMedium)
+                .padding(horizontal = DpLarge, vertical = DpNormal)
                 .align(Alignment.CenterHorizontally),
-            label = stringResource(R.string.hobbies_travel),
-            style = MaterialTheme.typography.titleLarge
+            label = stringResource(sport.name),
+            style = MaterialTheme.typography.titleMedium
         )
+        MinimalText(
+            modifier = Modifier
+                .padding(horizontal = DpLarge, vertical = DpNormal)
+                .align(Alignment.CenterHorizontally),
+            label = stringResource(sport.description),
+            style = MaterialTheme.typography.bodySmall
+        )
+    }
+}
+
+@Composable
+fun ColumnScope.TravelMap(
+    uiState: HobbiesUiState,
+    cameraPositionState: CameraPositionState,
+    onBackRoadTrip: () -> Unit,
+    onNextRoadTrip: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    MinimalText(
+        modifier = modifier
+            .padding(all = DpMedium)
+            .align(Alignment.CenterHorizontally),
+        label = stringResource(R.string.hobbies_travel),
+        style = MaterialTheme.typography.titleLarge
+    )
+    uiState.selectedRoadTrip?.let { roadtrip ->
+        MinimalText(
+            modifier = Modifier
+                .padding(all = DpNormal)
+                .align(Alignment.CenterHorizontally),
+            label = "${stringResource(roadtrip.name)} - ${roadtrip.year}",
+            style = MaterialTheme.typography.titleMedium,
+        )
+    }
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .weight(1f)
+    ) {
         GoogleMap(
             modifier = Modifier
-                .fillMaxWidth()
-                .weight(1f),
-            cameraPositionState = rememberCameraPositionState {
-                position = CameraPosition.fromLatLngZoom(
-                    LatLng(46.2276, 2.2137),
-                    2f
-                )
-            }
+                .fillMaxSize(),
+            cameraPositionState = cameraPositionState
         ) {
-            uiState.visitedCountries.forEach { country ->
-                val route: List<LatLng> = country.listCityData.map { it.location }
-                country.listCityData.forEach { place ->
+            uiState.selectedRoadTrip?.let { roadtrip ->
+                val route: List<LatLng> = roadtrip.listCityData.map { it.location }
+                roadtrip.listCityData.forEach { place ->
                     Marker(
                         state = MarkerState(
                             position = LatLng(
@@ -107,106 +187,29 @@ fun HobbiesScreen(
                 )
             }
         }
-    }
-}
-
-@Composable
-fun ColumnScope.SportCarousel(
-    uiState: HobbiesUiState,
-    onSportSelected: (Sport) -> Unit,
-    modifier: Modifier = Modifier
-) {
-    val listState = rememberLazyListState()
-    val coroutineScope = rememberCoroutineScope()
-
-    val itemWidth = 80.dp
-    val itemHeight = 80.dp
-    val spacing = 16.dp
-    val screenWidth = LocalConfiguration.current.screenWidthDp.dp
-
-    val horizontalContentPadding = (screenWidth - itemWidth) / 2
-
-    val centeredIndex by remember {
-        derivedStateOf {
-            val layoutInfo = listState.layoutInfo
-            if (layoutInfo.visibleItemsInfo.isEmpty()) {
-                return@derivedStateOf 0
-            }
-
-            val viewportCenter = (layoutInfo.viewportStartOffset + layoutInfo.viewportEndOffset) / 2f
-
-            layoutInfo.visibleItemsInfo
-                .minByOrNull { item ->
-                    val itemCenter = item.offset + item.size / 2f
-                    abs(itemCenter - viewportCenter)
-                }?.index ?: 0
-        }
-    }
-    LazyRow(
-        state = listState,
-        contentPadding = PaddingValues(horizontal = horizontalContentPadding),
-        horizontalArrangement = Arrangement.spacedBy(spacing),
-        modifier = modifier
-            .fillMaxWidth()
-            .wrapContentHeight()
-    ) {
-        itemsIndexed(uiState.sports) { index, sport ->
-            val isSelected = index == centeredIndex
-
-            LaunchedEffect(isSelected, sport) {
-                if (isSelected) {
-                    onSportSelected(sport)
-                }
-            }
-
-            LaunchedEffect(listState.isScrollInProgress) {
-                if (!listState.isScrollInProgress) {
-                    listState.animateScrollToItem(centeredIndex)
-                }
-            }
-
-            val scale by animateFloatAsState(
-                targetValue = if (isSelected) 1.3f else 1f,
-                label = "scaleAnimation"
-            )
-
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center,
-                modifier = Modifier
-                    .size(itemWidth, itemHeight)
-                    .graphicsLayer {
-                        scaleX = scale
-                        scaleY = scale
-                    }
-                    .clickable {
-                        coroutineScope.launch {
-                            listState.animateScrollToItem(index)
-                        }
-                    }
-            ) {
-                Image(
-                    painter = painterResource(id = sport.icon),
-                    contentDescription = stringResource(sport.name),
-                    modifier = Modifier.size(48.dp),
-                )
-            }
-        }
-    }
-    uiState.selectedSport?.let {
-        MinimalText(
+        Image(
             modifier = Modifier
-                .padding(horizontal = DpLarge)
-                .align(Alignment.CenterHorizontally),
-            label = stringResource(it.name),
-            style = MaterialTheme.typography.titleMedium
+                .size(DpIcon)
+                .align(Alignment.CenterStart)
+                .clickable {
+                    if (uiState.countRoadTrip > 0) {
+                        onBackRoadTrip()
+                    }
+                },
+            imageVector = Icons.Default.ArrowCircleLeft,
+            contentDescription = "Select back roadtrip"
         )
-        MinimalText(
+        Image(
             modifier = Modifier
-                .padding(horizontal = DpLarge)
-                .align(Alignment.CenterHorizontally),
-            label = stringResource(it.description),
-            style = MaterialTheme.typography.bodySmall
+                .size(DpIcon)
+                .align(Alignment.CenterEnd)
+                .clickable {
+                    if (uiState.countRoadTrip < uiState.roadTrips.size) {
+                        onNextRoadTrip()
+                    }
+                },
+            imageVector = Icons.Default.ArrowCircleRight,
+            contentDescription = "Select next roadtrip"
         )
     }
 }

@@ -24,11 +24,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.vprioul.cv.core.designsystem.component.IconLateral
 import com.vprioul.cv.core.designsystem.component.MinimalIconButton
 import com.vprioul.cv.core.designsystem.component.MinimalText
+import com.vprioul.cv.core.designsystem.theme.DpImage
 import com.vprioul.cv.core.designsystem.theme.DpLarge
 import com.vprioul.cv.core.resources.R
 import com.vprioul.cv.core.ui.AppReference
@@ -58,7 +58,7 @@ fun HomeScreen(
         ) {
             Image(
                 modifier = Modifier
-                    .size(200.dp)
+                    .size(DpImage)
                     .clip(CircleShape),
                 painter = painterResource(R.drawable.vprioul),
                 contentDescription = stringResource(R.string.home_image),

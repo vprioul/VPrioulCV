@@ -41,7 +41,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import com.vprioul.cv.core.designsystem.theme.DpLarge
 import com.vprioul.cv.core.designsystem.theme.DpMedium
+import com.vprioul.cv.core.designsystem.theme.DpNormal
 import com.vprioul.cv.core.designsystem.theme.DpSmall
 import com.vprioul.cv.core.designsystem.theme.VPrioulCVTheme
 import kotlinx.collections.immutable.ImmutableList
@@ -186,13 +188,13 @@ fun MinimalCard(title: String, description: String, modifier: Modifier = Modifie
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(8.dp),
+            .padding(DpNormal),
         shape = MaterialTheme.shapes.extraSmall,
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = DpSmall)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(DpLarge)) {
             Text(text = title, style = MaterialTheme.typography.titleLarge)
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(DpNormal))
             Text(text = description, style = MaterialTheme.typography.bodyLarge)
         }
     }
@@ -202,8 +204,8 @@ fun MinimalCard(title: String, description: String, modifier: Modifier = Modifie
 fun MinimalList(items: ImmutableList<String>, modifier: Modifier = Modifier) {
     LazyColumn(
         modifier = modifier,
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+        contentPadding = PaddingValues(DpLarge),
+        verticalArrangement = Arrangement.spacedBy(DpMedium)
     ) {
         items(items) { item ->
             MinimalCard(title = item, description = "Description de $item")
@@ -221,7 +223,7 @@ private fun MainScreen() {
             modifier = Modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background)
-                .padding(16.dp),
+                .padding(DpLarge),
             verticalArrangement = Arrangement.spacedBy(DpMedium)
         ) {
             MinimalText("Title large", style = MaterialTheme.typography.titleLarge)

@@ -24,6 +24,8 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.vprioul.cv.core.designsystem.theme.DpApp
+import com.vprioul.cv.core.designsystem.theme.DpLarge
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.coroutines.launch
 import kotlin.math.abs
@@ -34,9 +36,9 @@ fun <T> ColumnScope.IconCarousel(
     modifier: Modifier = Modifier
         .fillMaxWidth()
         .wrapContentHeight(),
-    itemWidth: Dp = 80.dp,
-    itemHeight: Dp = 80.dp,
-    spacing: Dp = 16.dp,
+    itemWidth: Dp = DpApp,
+    itemHeight: Dp = DpApp,
+    spacing: Dp = DpLarge,
     selectedItemContent: (T) -> Unit = {},
     itemContent: @Composable (item: T, isSelected: Boolean) -> Unit
 ) {

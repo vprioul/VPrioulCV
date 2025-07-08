@@ -19,12 +19,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.vprioul.cv.core.designsystem.component.IconLateral
 import com.vprioul.cv.core.designsystem.component.MinimalIconButton
 import com.vprioul.cv.core.designsystem.component.MinimalText
 import com.vprioul.cv.core.designsystem.component.MinimalTextField
+import com.vprioul.cv.core.designsystem.theme.DpImage
 import com.vprioul.cv.core.designsystem.theme.DpLarge
 import com.vprioul.cv.core.designsystem.theme.DpMedium
 import com.vprioul.cv.core.resources.R
@@ -100,7 +100,7 @@ private fun ContactForm(
         )
 
         MinimalTextField(
-            modifier = Modifier.height(200.dp),
+            modifier = Modifier.height(DpImage),
             value = message,
             onValueChange = onMessageChanged,
             label = stringResource(R.string.message)

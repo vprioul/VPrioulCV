@@ -22,7 +22,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.unit.dp
 import com.vprioul.cv.core.resources.R
 import com.vprioul.cv.feature.login.ui.navigation.LoginNavigation
 import com.vprioul.cv.feature.login.ui.viewmodel.LoginViewModel
@@ -30,6 +29,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.vprioul.cv.core.designsystem.component.MinimalButton
 import com.vprioul.cv.core.designsystem.component.MinimalText
 import com.vprioul.cv.core.designsystem.component.MinimalTextField
+import com.vprioul.cv.core.designsystem.theme.DpImage
 import com.vprioul.cv.core.designsystem.theme.DpLarge
 import com.vprioul.cv.core.designsystem.theme.DpMedium
 import com.vprioul.cv.feature.login.ui.state.LoginState
@@ -61,7 +61,7 @@ fun LoginScreen(
         ) {
             Image(
                 modifier = Modifier
-                    .size(200.dp)
+                    .size(DpImage)
                     .clip(CircleShape),
                 painter = painterResource(R.drawable.vprioul),
                 contentDescription = "Photo de profil",

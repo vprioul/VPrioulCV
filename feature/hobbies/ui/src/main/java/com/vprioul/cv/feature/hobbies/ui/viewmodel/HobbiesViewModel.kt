@@ -15,16 +15,27 @@ import javax.inject.Inject
 
 data class HobbiesUiState(
     val sports: List<Sport> = SportData.sports,
-    val visitedCountries: List<Travel> = TravelData.travels,
+    val roadTrips: List<Travel> = TravelData.travels,
     val selectedSport: Sport? = null,
-    val selectedCountry: Travel? = null,
-    val isMapVisible: Boolean = true
+    val selectedRoadTrip: Travel? = null,
+    val countRoadTrip: Int = 0
 )
 
 @HiltViewModel
 class HobbiesViewModel @Inject constructor() : ViewModel() {
     private val _uiState = MutableStateFlow(HobbiesUiState())
     val uiState: StateFlow<HobbiesUiState> = _uiState.asStateFlow()
+
+    init {
+        if (uiState.value.sports.isNotEmpty()) {
+            onSportSelected(uiState.value.sports[0])
+        }
+        if (uiState.value.roadTrips.isNotEmpty()) {
+            _uiState.value = _uiState.value.copy(
+                selectedRoadTrip = _uiState.value.roadTrips[0]
+            )
+        }
+    }
 
     fun onSportSelected(sport: Sport) {
         viewModelScope.launch {
@@ -34,18 +45,15 @@ class HobbiesViewModel @Inject constructor() : ViewModel() {
         }
     }
 
-    fun onCountrySelected(country: Travel) {
+    fun onRoadTrip(isNext: Boolean) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(
-                selectedCountry = country
-            )
-        }
-    }
+            val currentIndex = _uiState.value.countRoadTrip
+            val newIndex = (currentIndex + if (isNext) 1 else -1)
+                .coerceIn(0, _uiState.value.roadTrips.lastIndex)
 
-    fun onToggleMap() {
-        viewModelScope.launch {
             _uiState.value = _uiState.value.copy(
-                isMapVisible = !_uiState.value.isMapVisible
+                countRoadTrip = newIndex,
+                selectedRoadTrip = _uiState.value.roadTrips[newIndex]
             )
         }
     }

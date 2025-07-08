@@ -25,3 +25,12 @@ val DpXXLarge = 32.dp
 
 /** 64 dp */
 val DpIcon = 64.dp
+
+/** 64 dp */
+val DpApp = 80.dp
+
+/** 200 dp */
+val DpImage = 200.dp
+
+/** 200 dp */
+val DpText = 200.dp

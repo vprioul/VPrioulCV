@@ -6,41 +6,47 @@ import com.vprioul.cv.feature.hobbies.domain.model.Travel
 
 object TravelData {
     val travels: List<Travel> = listOf(
-        Travel(R.string.hobbies_travel_french,
+        Travel(
+            R.string.hobbies_travel_french,
             2025,
             listOf(
-                CityData("Bordeaux", LatLng(47.5162, 14.5501)),
-                CityData("Lacanau", LatLng(47.5162, 14.5501)),
+                CityData("Bordeaux", LatLng(44.8378, -0.5792)),
+                CityData("Lacanau", LatLng(45.0043, -1.1384)),
             )
         ),
-        Travel(R.string.hobbies_travel_french,
+        Travel(
+            R.string.hobbies_travel_french,
             2025,
             listOf(
-                CityData("Lyon", LatLng(47.5162, 14.5501)),
+                CityData("Lyon", LatLng(45.7640, 4.8357)),
             )
         ),
-        Travel(R.string.hobbies_travel_french,
+        Travel(
+            R.string.hobbies_travel_french,
             2024,
             listOf(
                 CityData("La Toussiure", LatLng(45.2470, 6.2715)),
             )
         ),
-        Travel(R.string.hobbies_travel_autria,
+        Travel(
+            R.string.hobbies_travel_autria,
             2024,
             listOf(
-                CityData("Vienne", LatLng(48.2082, 16.3738)),
                 CityData("Prague", LatLng(50.0755, 14.4378)),
+                CityData("Vienne", LatLng(48.2082, 16.3738)),
                 CityData("Bratislava", LatLng(48.1486, 17.1077)),
             )
         ),
-        Travel(R.string.hobbies_travel_switzerland,
+        Travel(
+            R.string.hobbies_travel_switzerland,
             2024,
             listOf(
                 CityData("Annecy", LatLng(45.8992, 6.1294)),
                 CityData("Genève", LatLng(46.2044, 6.1432)),
             )
         ),
-        Travel(R.string.hobbies_travel_marocco,
+        Travel(
+            R.string.hobbies_travel_marocco,
             2024,
             listOf(
                 CityData("Casablanca", LatLng(33.5731, -7.5898)),
@@ -48,25 +54,24 @@ object TravelData {
                 CityData("Marrakech", LatLng(31.6295, -7.9811))
             )
         ),
-        Travel(R.string.hobbies_travel_belgium,
+        Travel(
+            R.string.hobbies_travel_belgium,
             2023,
             listOf(
-                CityData("Rennes", LatLng(48.1173, -1.6778)),
                 CityData("Lille", LatLng(50.6292, 3.0573)),
-                CityData("Bruges", LatLng(51.2093, 3.2247)),
                 CityData("Bruxelles", LatLng(50.8503, 4.3517)),
                 CityData("Mons", LatLng(50.4542, 3.9513)),
                 CityData("Liège", LatLng(50.6326, 5.5797)),
                 CityData("Maastricht", LatLng(50.8514, 5.6900)),
+                CityData("Luxembourg", LatLng(49.6117, 6.1319)),
                 CityData("Strasbourg", LatLng(48.5734, 7.7521)),
-                CityData("Francfort", LatLng(50.1109, 8.6821)),
-                CityData("Rennes", LatLng(48.1173, -1.6778))
+                CityData("Stuttgart", LatLng(48.7758, 9.1829)),
             )
         ),
-        Travel(R.string.hobbies_travel_spain,
+        Travel(
+            R.string.hobbies_travel_spain,
             2023,
             listOf(
-                CityData("Rennes", LatLng(48.1173, -1.6778)),
                 CityData("Bayonne", LatLng(43.4929, -1.4748)),
                 CityData("Madrid", LatLng(40.4168, -3.7038)),
                 CityData("Seville", LatLng(37.3891, -5.9845)),
@@ -78,14 +83,21 @@ object TravelData {
                 CityData("Porto", LatLng(41.1579, -8.6291)),
                 CityData("Valladolid", LatLng(41.6523, -4.7245)),
                 CityData("Bayonne", LatLng(43.4929, -1.4748)),
-                CityData("Rennes", LatLng(48.1173, -1.6778))
             )
         ),
-        Travel(R.string.hobbies_travel_french,
-            2023,
+        Travel(
+            R.string.hobbies_travel_belgium,
+            2022,
             listOf(
-                CityData("Bordeaux", LatLng(47.5162, 14.5501)),
-                CityData("Lacanau", LatLng(47.5162, 14.5501)),
+                CityData("Strasbourg", LatLng(48.5734, 7.7521)),
+            )
+        ),
+        Travel(
+            R.string.hobbies_travel_belgium,
+            2022,
+            listOf(
+                CityData("Lille", LatLng(50.6292, 3.0573)),
+                CityData("Bruges", LatLng(51.2093, 3.2247)),
             )
         ),
         Travel(
@@ -108,6 +120,14 @@ object TravelData {
                 CityData("Jökulsárlón", LatLng(64.0485, -16.1790)),
                 CityData("Vatnajökull", LatLng(64.4000, -16.8000)),
                 CityData("Höfn", LatLng(64.2540, -15.2082))
+            )
+        ),
+        Travel(
+            R.string.hobbies_travel_french,
+            2022,
+            listOf(
+                CityData("Bordeaux", LatLng(44.8378, -0.5792)),
+                CityData("Lacanau", LatLng(45.0043, -1.1384)),
             )
         ),
         Travel(
@@ -233,7 +253,7 @@ object TravelData {
             R.string.hobbies_travel_french,
             2018,
             listOf(
-                CityData("Gorges du Loup", LatLng(43.7264, 6.9982))
+                CityData("La Joue de Loup", LatLng(44.6906, 5.8883))
             )
         ),
         Travel(
@@ -340,14 +360,14 @@ object TravelData {
             R.string.hobbies_travel_england,
             1998,
             listOf(
-                CityData("Jersey", LatLng(49.2144, -2.1313)) // Île de Jersey (Channel Islands)
+                CityData("Jersey", LatLng(49.2144, -2.1313))
             )
         ),
         Travel(
             R.string.hobbies_travel_french,
             1997,
             listOf(
-                CityData("Valloire", LatLng(45.1659, 6.4289)) // Coordonnées précises pour Valloire
+                CityData("Valloire", LatLng(45.1659, 6.4289))
             )
         ),
         Travel(
@@ -359,7 +379,7 @@ object TravelData {
         ),
         Travel(
             R.string.hobbies_travel_french,
-            1996,
+            1995,
             listOf(
                 CityData("Valloire", LatLng(45.1659, 6.4289))
             )

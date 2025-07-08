@@ -7,7 +7,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -19,13 +18,14 @@ import com.vprioul.cv.navigation.MainNavigation
 import com.vprioul.cv.navigation.MainNavGraph
 import com.vprioul.cv.core.designsystem.component.VPrioulCVNavigationBar
 import com.vprioul.cv.core.designsystem.component.VPrioulCVNavigationBarItem
+import com.vprioul.cv.core.designsystem.theme.DpMedium
 
 @Composable
 fun MainScreen(
     navigation: MainNavigation,
     modifier: Modifier = Modifier
 ) {
-    modifier.padding(12.dp)
+    modifier.padding(DpMedium)
     val navController = rememberNavController()
     Scaffold(
         bottomBar = {
