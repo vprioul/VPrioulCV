@@ -23,7 +23,8 @@ import com.vprioul.cv.core.designsystem.component.MinimalText
 import com.vprioul.cv.core.designsystem.theme.DpIcon
 import com.vprioul.cv.core.designsystem.theme.DpMedium
 import com.vprioul.cv.core.ui.AppReference
-import com.vprioul.cv.feature.experience.domain.model.Experience
+import com.vprioul.cv.core.ui.ResourcesHelper
+import com.vprioul.cv.feature.experience.domain.model.ExperienceData
 import com.vprioul.cv.feature.experience.ui.viewmodel.ExperienceViewModel
 import kotlinx.collections.immutable.toImmutableList
 
@@ -33,17 +34,20 @@ fun ExperienceScreen(
     viewModel: ExperienceViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val listExp by uiState.experiences.collectAsState(emptyList())
 
     Column(modifier = modifier) {
         IconCarousel(
-            items = uiState.experiences.toImmutableList(),
+            items = listExp.toImmutableList(),
             selectedItemContent = { experience ->
                 viewModel.onExperienceSelected(experience)
             },
             itemContent = { experience, isSelected ->
                 Image(
-                    painter = painterResource(id = experience.companyLogo),
-                    contentDescription = stringResource(experience.companyName),
+                    painter = painterResource(id =
+                        ResourcesHelper.getDrawableAppIdByName(experience.companyLogo)
+                    ),
+                    contentDescription = experience.companyName,
                     modifier = Modifier.size(DpIcon),
                 )
             }
@@ -58,7 +62,7 @@ fun ExperienceScreen(
 
 @Composable
 private fun ExperienceCard(
-    experience: Experience?,
+    experience: ExperienceData?,
     modifier: Modifier = Modifier
 ) {
     val isSelected = remember { mutableStateOf(false) }
@@ -73,29 +77,29 @@ private fun ExperienceCard(
     ) {
         experience?.let {
             MinimalText(
-                label = stringResource(experience.companyName),
+                label = stringResource(ResourcesHelper.getStringExpIdByName(experience.companyName)),
                 style = MaterialTheme.typography.titleLarge
             )
 
             MinimalText(
-                label = stringResource(experience.position),
+                label = stringResource(ResourcesHelper.getStringExpIdByName(experience.position)),
                 style = MaterialTheme.typography.titleMedium
             )
 
             MinimalText(
-                label = stringResource(experience.period),
+                label = stringResource(ResourcesHelper.getStringExpIdByName(experience.period)),
                 style = MaterialTheme.typography.bodyMedium
             )
 
             MinimalText(
-                label = stringResource(experience.description),
+                label = stringResource(ResourcesHelper.getStringExpIdByName(experience.description)),
                 style = MaterialTheme.typography.bodySmall
             )
 
             experience.references?.let { references ->
                 AppReference(
                     modifier = Modifier.padding(DpMedium),
-                    references = references.toImmutableList()
+                    references = references
                 )
             }
         }

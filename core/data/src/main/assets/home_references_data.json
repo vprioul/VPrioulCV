@@ -1,0 +1,26 @@
+[
+  {
+    "appName": "Tour de France",
+    "appLogo": "ic_tdf",
+    "url": "https://play.google.com/store/apps/details?id=com.aso.tdf2012int&hl=fr",
+    "contentDescription": "Icône Tour de France"
+  },
+  {
+    "appName": "Dakar",
+    "appLogo": "ic_dakar",
+    "url": "https://play.google.com/store/apps/details?id=com.aso.dakar&hl=fr",
+    "contentDescription": "Icône Dakar"
+  },
+  {
+    "appName": "MojoPro",
+    "appLogo": "ic_mojopro",
+    "url": "https://play.google.com/store/apps/details?id=com.aviwest.mojopro&hl=fr",
+    "contentDescription": "Icône MojoPro"
+  },
+  {
+    "appName": "Detect Now",
+    "appLogo": "ic_detectnow",
+    "url": "https://play.google.com/store/apps/details?id=com.kantarmedia.detectnow.app&hl=fr",
+    "contentDescription": "Icône Detect Now"
+  }
+]

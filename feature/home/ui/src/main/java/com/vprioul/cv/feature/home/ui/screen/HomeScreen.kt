@@ -34,7 +34,6 @@ import com.vprioul.cv.core.resources.R
 import com.vprioul.cv.core.ui.AppReference
 import com.vprioul.cv.feature.home.ui.navigation.HomeNavigation
 import com.vprioul.cv.feature.home.ui.viewmodel.HomeViewModel
-import kotlinx.collections.immutable.toImmutableList
 
 @Composable
 fun HomeScreen(
@@ -115,7 +114,7 @@ fun HomeScreen(
                 style = MaterialTheme.typography.titleMedium
             )
 
-            AppReference(uiState.references.toImmutableList())
+            AppReference(uiState.references)
         }
     }
 }

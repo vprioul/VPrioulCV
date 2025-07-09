@@ -4,7 +4,7 @@ import com.vprioul.cv.core.domain.model.ReferenceData
 import com.vprioul.cv.core.resources.R
 
 object SocialNetworkData {
-    val socialNetworks: List<ReferenceData> = listOf(
+    val socialNetworks: List<ReferenceData> = listOf(/*
         ReferenceData(
             appName = R.string.linkedin,
             url = R.string.contact_linkedin,
@@ -22,6 +22,6 @@ object SocialNetworkData {
             url = R.string.contact_instagram,
             appLogo = R.drawable.ic_instagram,
             contentDescription = R.string.contact_instagram_image
-        ),
+        ),*/
     )
 }

@@ -2,8 +2,8 @@ package com.vprioul.cv.feature.skills.data.di
 
 import android.content.Context
 import com.vprioul.cv.feature.skills.data.datasource.LocalJsonSkillDataSource
-import com.vprioul.cv.feature.skills.data.repository.SkillsRepository
 import com.vprioul.cv.feature.skills.data.repository.SkillsRepositoryImpl
+import com.vprioul.cv.feature.skills.domain.repository.SkillsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

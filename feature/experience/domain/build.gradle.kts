@@ -7,7 +7,5 @@ android {
 }
 
 dependencies {
-    implementation(projects.feature.experience.data)
-    //Modules only Data or Domain
     implementation(projects.core.domain)
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "appName": "LinkedIn",
+    "url": "https://www.linkedin.com/in/vincent-prioul-3061ab63/",
+    "appLogo": "ic_linkedin",
+    "contentDescription": "contact_linkedin_image"
+  },
+  {
+    "appName": "Git Hub",
+    "url": "https://github.com/vprioul/",
+    "appLogo": "ic_git_hub",
+    "contentDescription": "contact_github_image"
+  },
+  {
+    "appName": "Instagram",
+    "url": "https://www.instagram.com/vincentprioul/",
+    "appLogo": "ic_instagram",
+    "contentDescription": "contact_instagram_image"
+  }
+]

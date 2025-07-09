@@ -12,15 +12,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.core.net.toUri
 import com.vprioul.cv.core.designsystem.theme.DpIcon
 import com.vprioul.cv.core.domain.model.ReferenceData
-import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun AppReference(
-    references: ImmutableList<ReferenceData>,
+    references: List<ReferenceData>,
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -30,7 +28,7 @@ fun AppReference(
             .fillMaxWidth()
     ) {
         items(references) { reference ->
-            val linkUrl = stringResource(reference.url)
+            val linkUrl = reference.url
             Image(
                 modifier = Modifier
                     .size(DpIcon)
@@ -38,8 +36,10 @@ fun AppReference(
                         val intent = Intent(Intent.ACTION_VIEW, linkUrl.toUri())
                         context.startActivity(intent)
                     },
-                painter = painterResource(id = reference.appLogo),
-                contentDescription = stringResource(id = reference.contentDescription)
+                painter = painterResource(
+                    ResourcesHelper.getDrawableAppIdByName(reference.appLogo)
+                ),
+                contentDescription = reference.contentDescription
             )
         }
     }

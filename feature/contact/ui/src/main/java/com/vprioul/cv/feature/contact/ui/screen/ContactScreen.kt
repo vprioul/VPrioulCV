@@ -31,7 +31,6 @@ import com.vprioul.cv.core.resources.R
 import com.vprioul.cv.core.ui.AppReference
 import com.vprioul.cv.feature.contact.ui.BuildConfig
 import com.vprioul.cv.feature.contact.ui.viewmodel.ContactViewModel
-import kotlinx.collections.immutable.toImmutableList
 
 @Composable
 fun ContactScreen(
@@ -49,7 +48,7 @@ fun ContactScreen(
         verticalArrangement = Arrangement.spacedBy(DpLarge)
     ) {
         // Social Networks
-        AppReference(uiState.socialNetworks.toImmutableList())
+        AppReference(uiState.socialNetworks)
 
         MinimalIconButton(
             text = stringResource(R.string.contact_phone),

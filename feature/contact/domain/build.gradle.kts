@@ -7,7 +7,6 @@ android {
 }
 
 dependencies {
-    implementation(projects.feature.contact.data)
     //Modules only Data or Domain
     implementation(projects.core.domain)
 }

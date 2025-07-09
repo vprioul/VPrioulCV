@@ -6,6 +6,7 @@
     <string name="cancel">Annuler</string>
     <string name="search">Recherche</string>
     <string name="validate">Valider</string>
+    <string name="error">Erreur</string>
     <string name="name">Nom</string>
     <string name="message">Message</string>
     <string name="more_info">Plus d’informations</string>
@@ -79,6 +80,7 @@
         Correction des problèmes vus par SonarCloud (refactorisation, dépréciation, diminution de lignes de codes par lambda, fonction, ...).\n
         Développement de nouvelles features sur l\’application (Kotlin / State / Flow / Clean architecture / NavGraph).\n
         Changement de l\’UI layout en Jetpack Compose (Utilisation de HorizontalPager, TabRow, LazyColumn, ...).\n
+        \n
         - Développement application Android Auto (Renault) pour les concessions automobile.\n
         Gestion de la relation client.\n
         Développement de nouvelles features sur l’application (Kotlin / Jetpack Compose / State / Flow / Clean architecture).\n
@@ -89,9 +91,11 @@
         Ajout de nouveaux calculs en comparaison avec différents moteurs.\n
         Utilisation d\’un émulateur spécifique Android Auto de la marque et voiture créé par le client.\n
         Utilisation des librairies Maptiler et Mailjet.\n
+        \n
         - Développement application mobile Android (DMA Armatures) pour l\’entreprise.\n
         Recompilation du projet qui n\’a pas évolué depuis 3 ans.\n
         Mise à jour de toutes les librairies (LiveData, Hilt, Kotlin, Gradle, ...).\n
+        \n
         - Management pour les applications mobiles Android (IER/Blue systems) pour l\’entreprise.\n
         Gestion de la relation client.\n
         Management des tickets Jira pour les applications mobiles Android TePV, TeFPS, SmartPatrol, IER Services, ...\n
@@ -105,16 +109,27 @@
     </string>
     <string name="experience_aviwest_description">
         Mise à jour des produits MojoSDK et MojoPro sur Android pour avoir les mêmes fonctionnalités que l\’application MojoPro iOS. Utilisés dans le monde entier par des journalistes dont les JO Paris 2024.\n
+        \n
         Reprise des projets : Mise à jour des derniers SDK Android, NDK, gradle, architectures, librairies, frameworks, ... Intégration des nouvelles fonctionnalités de la couche bas niveau (Core) en C/C++ avec le wrapper JNI. Ajout des architectures 64 bits (arm64 et x86_64). Passage à AndroidX, CMake 3.10.2, NDK 21.\n
+        \n
         Ajout d\’une nouvelle fonctionnalité, utilisation d\’une caméra externe connectée avec le protocole ONVIF.\n
+        \n
         Ajout de l\’API Caméra 2 au SDK avec réglages des paramètres white balance, ISO, zoom, focus, flash, résolution, framerate, ...\n
+        \n
         Rotation de tous les composants et vues de paysage à portrait.\n
+        \n
         Ajout de la fonctionnalité intercom sip qui permet d\’avoir une communication audio en temps réel.\n
+        \n
         Ajout de la fonctionnalité HEVC en live et record.\n
+        \n
         Mise en place de test automatique fonctionnel avec Appium Android/iOS (RobotFramework, Python).\n
+        \n
         Ajout d\’une fonctionnalité gyroscope pour aligner verticalement et horizontalement le téléphone.\n
+        \n
         Ajout de la fonctionnalité Video Return avec le framework VLC et Larix pour utiliser un flux SRT simultanément avec la caméra.
+        \n
         Ajout de la fonctionnalité ScreenSaver pour utiliser moins de puissance sur le téléphone en fonction de la température. Arrêt de la preview, arrêt des animations, diminution de la luminosité, arrêt de la géolocalisation. Analyse des performances CPU, mémoire et batterie.\n
+        \n
         Ajout de la fonctionnalité USB Camera avec l\’intégration d\’une librairie C/C++ pour détecter une caméra branchée en USB avec le protocole UVC. Pour ainsi utiliser les images de la caméra branchée en USB sur l\’application MoJoPro. \n
     </string>
     <string name="experience_kantar_title">Ingénieur développeur d\’applications mobiles Android/iOS</string>

@@ -1,0 +1,84 @@
+[
+  {
+    "companyName": "EXOMIND",
+    "companyLogo": "ic_exomind",
+    "period": "nov. 2023 - avr. 2025 · 1 an 6 mois",
+    "position": "Ingénieur développeur d’applications mobiles Android",
+    "shortDescription": "Développement et optimisation d’applications Android et Android Auto pour ASO, Renault, DMA Armatures et IER/Blue Systems. Ajout de nouvelles fonctionnalités en Kotlin avec Jetpack Compose en Clean Architecture ou architecture modulaire. Gestion de la relation client et coordination sur les différents projets.",
+    "description": "- Développement des applications mobiles Android (ASO Tour de France/Vuelta/Dakar) utilisées par plusieurs milliers d\\’utilisateurs.\\n\n        Gestion de la relation client.\\n\n        Correction des problèmes vus par SonarCloud (refactorisation, dépréciation, diminution de lignes de codes par lambda, fonction, ...).\\n\n        Développement de nouvelles features sur l\\’application (Kotlin / State / Flow / Clean architecture / NavGraph).\\n\n        Changement de l\\’UI layout en Jetpack Compose (Utilisation de HorizontalPager, TabRow, LazyColumn, ...).\\n\n        \\n\n        - Développement application Android Auto (Renault) pour les concessions automobile.\\n\n        Gestion de la relation client.\\n\n        Développement de nouvelles features sur l’application (Kotlin / Jetpack Compose / State / Flow / Clean architecture).\\n\n        Adaptation de l\\’UI avec différents écrans en portrait (10.4 et 12) ou paysage (9 et 10.1).\\n\n        Ajout de données de la voiture en temps réel de manière asynchrone et périodique.\\n\n        Résolution de bugs (clavier, texte, navigation, ...).\\n\n        Tests unitaires en TDD.\\n\n        Ajout de nouveaux calculs en comparaison avec différents moteurs.\\n\n        Utilisation d\\’un émulateur spécifique Android Auto de la marque et voiture créé par le client.\\n\n        Utilisation des librairies Maptiler et Mailjet.\\n\n        \\n\n        - Développement application mobile Android (DMA Armatures) pour l\\’entreprise.\\n\n        Recompilation du projet qui n\\’a pas évolué depuis 3 ans.\\n\n        Mise à jour de toutes les librairies (LiveData, Hilt, Kotlin, Gradle, ...).\\n\n        \\n\n        - Management pour les applications mobiles Android (IER/Blue systems) pour l\\’entreprise.\\n\n        Gestion de la relation client.\\n\n        Management des tickets Jira pour les applications mobiles Android TePV, TeFPS, SmartPatrol, IER Services, ...\\n",
+    "references": [
+      {
+        "appName": "Tour de France",
+        "appIcon": "ic_tdf",
+        "url": "https://tdf.fr",
+        "description": "Application officielle utilisée pour la couverture du Tour de France."
+      },
+      {
+        "appName": "Dakar",
+        "appIcon": "ic_dakar",
+        "url": "https://dakar.com",
+        "description": "Application officielle pour le rallye Dakar."
+      },
+      {
+        "appName": "Vuelta",
+        "appIcon": "ic_vuelta",
+        "url": "https://lavuelta.es",
+        "description": "Couverture de la course cycliste espagnole Vuelta."
+      }
+    ]
+  },
+  {
+    "companyName": "Aviwest/Haivision",
+    "companyLogo": "ic_aviwest",
+    "period": "jan. 2020 - dec. 2022 · 3 ans",
+    "position": "Ingénieur développeur d’applications mobiles Android",
+    "shortDescription": "Mise à jour des produits MojoSDK et MojoPro sur Android pour aligner les fonctionnalités avec iOS. [...]",
+    "description": "Mise à jour des produits MojoSDK et MojoPro sur Android pour avoir les mêmes fonctionnalités que l’application MojoPro iOS. [...]",
+    "references": [
+      {
+        "appName": "MojoPro",
+        "appIcon": "ic_mojopro",
+        "url": "https://mojopro.com",
+        "description": "Application journalistique utilisée à l'international."
+      }
+    ]
+  },
+  {
+    "companyName": "Kantar Media",
+    "companyLogo": "ic_kantar",
+    "period": "juil. 2017 - sep. 2019 · 2 ans 3 mois",
+    "position": "Ingénieur développeur d’applications mobiles Android/iOS",
+    "shortDescription": "Développement de l’application DetectNow sur iOS et Android (App Store & Google Play). [...]",
+    "description": "Développement de l’application DetectNow sur iOS et Android disponible sur les stores. [...]",
+    "references": [
+      {
+        "appName": "DetectNow",
+        "appIcon": "ic_detectnow",
+        "url": "https://detectnow.com",
+        "description": "Application de détection de tatouage numérique audio."
+      }
+    ]
+  },
+  {
+    "companyName": "Ovianet",
+    "companyLogo": "ic_ovianet",
+    "period": "mars 2015 - dec. 2016 · 1 an 10 mois",
+    "position": "Ingénieur développeur d’applications mobiles",
+    "shortDescription": "Création, retour et mises à jours sur plusieurs applications mobiles Android. [...]",
+    "description": "Création de plusieurs applications mobiles Android ainsi que des mises à jour pour des clients.\n[...]",
+    "references": [
+      {
+        "appName": "Génération",
+        "appIcon": "ic_generation",
+        "url": "https://generation.com",
+        "description": "Application mobile développée pour la gestion de la vie quotidienne."
+      },
+      {
+        "appName": "Ithylo",
+        "appIcon": "ic_ithylo",
+        "url": "https://ithylo.com",
+        "description": "Outil de gestion et de traçabilité pour l'industrie."
+      }
+    ]
+  }
+]

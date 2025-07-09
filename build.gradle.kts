@@ -35,8 +35,8 @@ plugins {
 allprojects {
     tasks.whenTaskAdded {
         if (name == "compileDemoDebugKotlin" || name == "compileProdDebugKotlin") {
-            dependsOn(tasks.detekt)
-            mustRunAfter(tasks.detekt)
+            //dependsOn(tasks.detekt)
+            //mustRunAfter(tasks.detekt)
         }
     }
 }

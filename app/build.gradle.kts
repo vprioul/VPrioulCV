@@ -41,6 +41,7 @@ secrets {
 dependencies {
     implementation(projects.core.designsystem)
     implementation(projects.core.resources)
+    implementation(projects.core.data)
     implementation(libs.timber)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlin.reflect)
@@ -50,8 +51,10 @@ dependencies {
     implementation(projects.feature.login.ui)
     implementation(projects.feature.hobbies.ui)
     implementation(projects.feature.contact.ui)
+    implementation(projects.feature.skills.data)
     implementation(projects.feature.skills.ui)
     implementation(projects.feature.education.ui)
+    implementation(projects.feature.experience.data)
     implementation(projects.feature.experience.ui)
     implementation(projects.feature.home.ui)
 }

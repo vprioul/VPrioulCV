@@ -28,7 +28,7 @@ import com.vprioul.cv.core.designsystem.theme.DpIcon
 import com.vprioul.cv.core.designsystem.theme.DpLarge
 import com.vprioul.cv.core.designsystem.theme.DpMedium
 import com.vprioul.cv.core.ui.ResourcesHelper
-import com.vprioul.cv.feature.skills.domain.usecase.model.SkillData
+import com.vprioul.cv.feature.skills.domain.model.SkillData
 import com.vprioul.cv.feature.skills.ui.viewmodel.SkillsViewModel
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -80,7 +80,7 @@ private fun SkillsGrid(
                         .clickable {
                             Toast.makeText(context, skill.name, Toast.LENGTH_SHORT).show()
                         },
-                    painter = painterResource(ResourcesHelper.getDrawableIdByName(skill.icon)),
+                    painter = painterResource(ResourcesHelper.getDrawableSkillIdByName(skill.icon)),
                     contentDescription = skill.name
                 )
             }

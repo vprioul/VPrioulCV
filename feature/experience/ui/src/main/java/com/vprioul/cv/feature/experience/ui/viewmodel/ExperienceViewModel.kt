@@ -2,26 +2,34 @@ package com.vprioul.cv.feature.experience.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vprioul.cv.feature.experience.domain.model.Experience
-import com.vprioul.cv.feature.experience.domain.data.ExperienceData
+import com.vprioul.cv.feature.experience.domain.model.ExperienceData
+import com.vprioul.cv.feature.experience.domain.usecase.GetExperiencesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 data class ExperienceUiState(
-    val experiences: List<Experience> = ExperienceData.experiences,
-    val selectedExperience: Experience? = null
+    val experiences: Flow<List<ExperienceData>> = emptyFlow(),
+    val selectedExperience: ExperienceData? = null
 )
 
 @HiltViewModel
-class ExperienceViewModel @Inject constructor() : ViewModel() {
+class ExperienceViewModel @Inject constructor(
+    private val getExperiencesUseCase: GetExperiencesUseCase
+) : ViewModel() {
     private val _uiState = MutableStateFlow(ExperienceUiState())
     val uiState: StateFlow<ExperienceUiState> = _uiState.asStateFlow()
 
-    fun onExperienceSelected(experience: Experience) {
+    init {
+        _uiState.value = _uiState.value.copy(experiences = getExperiencesUseCase.invoke())
+    }
+
+    fun onExperienceSelected(experience: ExperienceData) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(
                 selectedExperience = experience

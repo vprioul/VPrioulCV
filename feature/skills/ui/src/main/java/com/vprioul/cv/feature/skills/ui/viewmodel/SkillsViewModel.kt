@@ -2,8 +2,8 @@ package com.vprioul.cv.feature.skills.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vprioul.cv.feature.skills.domain.usecase.usecase.GetSkillsUseCase
-import com.vprioul.cv.feature.skills.domain.usecase.model.SkillData
+import com.vprioul.cv.feature.skills.domain.usecase.GetSkillsUseCase
+import com.vprioul.cv.feature.skills.domain.model.SkillData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

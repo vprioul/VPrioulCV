@@ -11,10 +11,19 @@
   <component name="ChangeListManager">
     <list default="true" id="fdf8db19-9079-4655-8e4a-696b1baf1282" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../Sessio/app/google-services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/ui/src/main/java/com/vprioul/cv/core/ui/ResourcesHelper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature/skills/data/src/main/assets/skills_data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/datasource/LocalJsonSkillDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/main/java/com/vprioul/cv/core/data/datasource/LocalJsonReferenceDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/main/java/com/vprioul/cv/core/data/di/ReferenceBindsDi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/main/java/com/vprioul/cv/core/data/di/ReferenceModuleDi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/main/java/com/vprioul/cv/core/data/model/Reference.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/main/java/com/vprioul/cv/core/data/repository/ReferenceRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/domain/src/main/java/com/vprioul/cv/core/domain/repository/ReferenceRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/domain/src/main/java/com/vprioul/cv/core/domain/usecase/GetReferencesUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature/experience/domain/src/main/java/com/vprioul/cv/feature/experience/domain/repository/ExperienceRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature/experience/domain/src/main/java/com/vprioul/cv/feature/experience/domain/usecase/GetExperiencesUseCase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Modules/design/theme/Dimen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modules/design/theme/Dimen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Modules/feature/Feature.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modules/feature/Feature.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Modules/feature/featurepackage/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modules/feature/featurepackage/data/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Modules/feature/featurepackage/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modules/feature/featurepackage/domain/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Modules/module_map/MapModule.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Modules/module_map/MapUseCaseModule.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Modules/module_map/add_module_map.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modules/module_map/add_module_map.sh" afterDir="false" />
@@ -24,43 +33,148 @@
       <change beforePath="$PROJECT_DIR$/../../Modules/module_share/ShareManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modules/module_share/ShareManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Modules/module_share/ShareModuleDi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modules/module_share/ShareModuleDi.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/AppProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/CoreProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Core_DataProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Core_DesignsystemProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Core_DomainProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Core_ResourcesProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Core_UiProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/FeatureProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_ContactProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Contact_DataProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Contact_DomainProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Contact_UiProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_EducationProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Education_DataProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Education_DomainProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Education_UiProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_ExperienceProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Experience_DataProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Experience_DomainProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Experience_UiProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_HobbiesProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Hobbies_DataProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Hobbies_DomainProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Hobbies_UiProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_HomeProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Home_DataProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Home_DomainProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Home_UiProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_SkillsProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Skills_DataProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Skills_DomainProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Skills_UiProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_SplashProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Splash_DataProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Splash_DomainProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/Feature_Splash_UiProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/RootProjectAccessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/classes/org/gradle/accessors/dm/VPrioulCVProjectDependency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/metadata.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/AppProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/CoreProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Core_DataProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Core_DesignsystemProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Core_DomainProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Core_ResourcesProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Core_UiProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/FeatureProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_ContactProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Contact_DataProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Contact_DomainProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Contact_UiProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_EducationProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Education_DataProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Education_DomainProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Education_UiProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_ExperienceProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Experience_DataProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Experience_DomainProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Experience_UiProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_HobbiesProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Hobbies_DataProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Hobbies_DomainProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Hobbies_UiProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_HomeProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Home_DataProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Home_DomainProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Home_UiProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_SkillsProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Skills_DataProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Skills_DomainProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Skills_UiProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_SplashProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Splash_DataProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Splash_DomainProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/Feature_Splash_UiProjectDependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/RootProjectAccessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/dependencies-accessors/6ed2413e28aed12c9f08db9efb266ebe75dbd1f2/sources/org/gradle/accessors/dm/VPrioulCVProjectDependency.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/vprioul/cv/screen/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/vprioul/cv/screen/MainScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-9395303011573086156.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/8.10.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/designsystem/src/main/java/com/vprioul/cv/core/designsystem/component/ComponentMinimal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/designsystem/src/main/java/com/vprioul/cv/core/designsystem/component/ComponentMinimal.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/designsystem/src/main/java/com/vprioul/cv/core/designsystem/component/IconCarousel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/designsystem/src/main/java/com/vprioul/cv/core/designsystem/component/IconCarousel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/designsystem/src/main/java/com/vprioul/cv/core/designsystem/theme/Dimen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/designsystem/src/main/java/com/vprioul/cv/core/designsystem/theme/Dimen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/designsystem/src/main/java/com/vprioul/cv/core/designsystem/theme/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/designsystem/src/main/java/com/vprioul/cv/core/designsystem/theme/Type.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/convention/src/main/java/AndroidFeatureDataConventionPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/convention/src/main/java/AndroidFeatureDataConventionPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/core/domain/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/domain/src/main/java/com/vprioul/cv/core/domain/model/ReferenceData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/domain/src/main/java/com/vprioul/cv/core/domain/model/ReferenceData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/resources/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/ui/src/main/java/com/vprioul/cv/core/ui/AppReference.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/ui/src/main/java/com/vprioul/cv/core/ui/AppReference.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/ui/src/main/java/com/vprioul/cv/core/ui/ResourcesHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/ui/src/main/java/com/vprioul/cv/core/ui/ResourcesHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/contact/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature/contact/data/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/contact/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature/contact/domain/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/contact/domain/src/main/java/com/vprioul/cv/feature/contact/domain/data/SocialNetworkData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/contact/domain/src/main/java/com/vprioul/cv/feature/contact/domain/data/SocialNetworkData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/contact/ui/src/main/java/com/vprioul/cv/feature/contact/ui/screen/ContactScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/contact/ui/src/main/java/com/vprioul/cv/feature/contact/ui/screen/ContactScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/contact/ui/src/main/java/com/vprioul/cv/feature/contact/ui/viewmodel/ContactViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/contact/ui/src/main/java/com/vprioul/cv/feature/contact/ui/viewmodel/ContactViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/experience/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature/experience/data/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/experience/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature/experience/domain/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/experience/domain/src/main/java/com/vprioul/cv/feature/experience/domain/data/ExperienceData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/experience/domain/src/main/java/com/vprioul/cv/feature/experience/domain/data/ExperienceDataOld.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/experience/domain/src/main/java/com/vprioul/cv/feature/experience/domain/model/Experience.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/experience/domain/src/main/java/com/vprioul/cv/feature/experience/domain/model/ExperienceData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/experience/ui/src/main/java/com/vprioul/cv/feature/experience/ui/screen/ExperienceScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/experience/ui/src/main/java/com/vprioul/cv/feature/experience/ui/screen/ExperienceScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/hobbies/domain/src/main/java/com/vprioul/cv/feature/hobbies/domain/data/TravelData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/hobbies/domain/src/main/java/com/vprioul/cv/feature/hobbies/domain/data/TravelData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/hobbies/ui/src/main/java/com/vprioul/cv/feature/hobbies/ui/screen/HobbiesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/hobbies/ui/src/main/java/com/vprioul/cv/feature/hobbies/ui/screen/HobbiesScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/hobbies/ui/src/main/java/com/vprioul/cv/feature/hobbies/ui/viewmodel/HobbiesViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/hobbies/ui/src/main/java/com/vprioul/cv/feature/hobbies/ui/viewmodel/HobbiesViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/experience/ui/src/main/java/com/vprioul/cv/feature/experience/ui/viewmodel/ExperienceViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/experience/ui/src/main/java/com/vprioul/cv/feature/experience/ui/viewmodel/ExperienceViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/home/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature/home/domain/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/home/domain/src/main/java/com/vprioul/cv/feature/home/domain/data/ReferenceHomeData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/home/domain/src/main/java/com/vprioul/cv/feature/home/domain/data/ReferenceHomeData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/home/ui/src/main/java/com/vprioul/cv/feature/home/ui/screen/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/home/ui/src/main/java/com/vprioul/cv/feature/home/ui/screen/HomeScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/login/ui/src/main/java/com/vprioul/cv/feature/login/ui/screen/LoginScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/login/ui/src/main/java/com/vprioul/cv/feature/login/ui/screen/LoginScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/home/ui/src/main/java/com/vprioul/cv/feature/home/ui/viewmodel/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/home/ui/src/main/java/com/vprioul/cv/feature/home/ui/viewmodel/HomeViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/skills/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/data/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/di/SkillModuleDi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/di/SkillModuleDi.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/model/Skill.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/model/Skill.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/model/SkillCategory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/model/SkillCategory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/model/SkillType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/model/SkillType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/repository/SkillsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/repository/SkillsRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/repository/SkillsRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/data/src/main/java/com/vprioul/cv/feature/skills/data/repository/SkillsRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/usecase/model/SkillData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/usecase/model/SkillData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/skills/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/domain/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/usecase/model/SkillCategoryData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/model/SkillCategoryData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/usecase/model/SkillData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/model/SkillData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/usecase/model/SkillTypeData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/model/SkillTypeData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/usecase/usecase/GetSkillsUseCase.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/skills/ui/src/main/java/com/vprioul/cv/feature/skills/ui/screen/SkillsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/ui/src/main/java/com/vprioul/cv/feature/skills/ui/screen/SkillsScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/splash/ui/src/main/java/com/vprioul/cv/feature/splash/ui/screen/SplashScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/splash/ui/src/main/java/com/vprioul/cv/feature/splash/ui/screen/SplashScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/detekt.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/detekt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/skills/ui/src/main/java/com/vprioul/cv/feature/skills/ui/viewmodel/SkillsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/skills/ui/src/main/java/com/vprioul/cv/feature/skills/ui/viewmodel/SkillsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TemplateBash.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TemplateBash/build-logic/convention/src/main/java/AndroidFeatureDomainConventionPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/build-logic/convention/src/main/java/AndroidFeatureDomainConventionPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TemplateBash/core/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/core/data/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TemplateBash/core/designsystem/src/main/java/com/template/vprioul/core/designsystem/theme/Color.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/core/designsystem/src/main/java/com/template/vprioul/core/designsystem/theme/Color.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TemplateBash/core/designsystem/src/main/java/com/template/vprioul/core/designsystem/theme/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/core/designsystem/src/main/java/com/template/vprioul/core/designsystem/theme/Type.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TemplateBash/core/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/core/domain/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TemplateBash/core/resources/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/core/resources/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TemplateBash/feature/home/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/feature/home/data/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TemplateBash/feature/home/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/feature/home/domain/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TemplateBash/feature/splash/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/feature/splash/data/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TemplateBash/feature/splash/domain/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../TemplateBash/feature/splash/domain/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,12 +193,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Interface" />
         <option value="Kotlin Enum" />
-        <option value="Kotlin Data Class" />
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -126,13 +240,15 @@
     "SHOW_ALL_PROCESSES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/VPrioul/Developer/Exomind/Template/Project/VPrioulCV"
+    "last_opened_file_path": "/Users/VPrioul/Developer/Exomind/Template/Project/VPrioulCV/core/data/src/main/java/com/vprioul/cv/core/data"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/data/src/main/java/com/vprioul/cv/core/data" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/core/phone/data/src/main/java/com/vprioul/cv/core/phone/data/di" />
       <recent name="$PROJECT_DIR$/core/email/data/src/main/java/com/vprioul/cv/core/email/data/di" />
@@ -144,10 +260,16 @@
       <recent name="$PROJECT_DIR$/feature/skills/domain/src/main/java/com/vprioul/cv/feature/skills/domain/usecase/model" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="com.vprioul.cv.feature.hobbies.domain.model" />
-      <recent name="com.vprioul.cv.feature.skills.domain.usecase.usecase" />
-      <recent name="com.vprioul.cv.feature.skills.data.repository" />
-      <recent name="com.vprioul.cv.feature.skills.data.model" />
+      <recent name="com.vprioul.cv.core.domain.usecase" />
+      <recent name="com.vprioul.cv.core.domain.repository" />
+      <recent name="com.vprioul.cv.feature.home.data.repository" />
+      <recent name="com.vprioul.cv.feature.home.data.di" />
+      <recent name="com.vprioul.cv.feature.home.data.model" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.vprioul.cv.feature.skills.domain.repository" />
+      <recent name="com.vprioul.cv.feature.contact.domain.usecase" />
+      <recent name="com.vprioul.cv.feature.contact.data" />
     </key>
   </component>
   <component name="RunManager">
@@ -268,7 +390,7 @@
         </entry>
         <entry key="com.vprioul.cv.core.resources.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1751957460549" />
+            <CheckInfo lastCheckTimestamp="1752056509854" />
           </value>
         </entry>
       </map>

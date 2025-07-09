@@ -16,7 +16,9 @@ apply("plugin.android.hilt")
 
             dependencies {
                 add("implementation", project(":core:resources"))
+                add("implementation", project(":core:domain"))
                 add("implementation", libs.findLibrary("kotlinx.serialization.json").get())
+                add("implementation", libs.findLibrary("gson").get())
             }
         }
     }

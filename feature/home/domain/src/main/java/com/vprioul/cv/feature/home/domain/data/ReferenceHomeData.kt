@@ -4,7 +4,7 @@ import com.vprioul.cv.core.domain.model.ReferenceData
 import com.vprioul.cv.core.resources.R
 
 object ReferenceHomeData {
-    val references: List<ReferenceData> = listOf(
+    val references: List<ReferenceData> = listOf(/*
         ReferenceData(
             R.string.references_tdf,
             R.drawable.ic_tdf,
@@ -28,6 +28,6 @@ object ReferenceHomeData {
             R.drawable.ic_detectnow,
             R.string.references_detectnow_url,
             R.string.references_detectnow_description,
-        )
+        )*/
     )
 }

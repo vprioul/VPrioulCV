@@ -8,65 +8,25 @@ object ResourcesHelper {
         return resources.getIdentifier(name, "drawable", packageName)
     }
 
-    /*fun getDrawableIdByName(name: String): Int {
-        return when (name) {
-            "ic_git" -> R.drawable.ic_git
-            "ic_git_hub" -> R.drawable.ic_git_hub
-            "ic_jenkins" -> R.drawable.ic_jenkins
-            "ic_sublime_text" -> R.drawable.ic_sublime_text
-            "ic_cursor" -> R.drawable.ic_cursor
-            "ic_chatgpt" -> R.drawable.ic_chatgpt
-            "ic_gemini" -> R.drawable.ic_gemini
-            "ic_claude_ai" -> R.drawable.ic_claude_ai
-            "ic_mistral" -> R.drawable.ic_mistral
-            "ic_deepseek" -> R.drawable.ic_deepseek
-            "ic_docker" -> R.drawable.ic_docker
-            "ic_google_chrome" -> R.drawable.ic_google_chrome
-            "ic_google_play" -> R.drawable.ic_google_play
-            "ic_jira" -> R.drawable.ic_jira
-            "ic_slack" -> R.drawable.ic_slack
-            "ic_teams" -> R.drawable.ic_teams
-            "ic_redmine" -> R.drawable.ic_redmine
-            "ic_sonar" -> R.drawable.ic_sonar
-            "ic_vm_ware" -> R.drawable.ic_vm_ware
-            "ic_azure_devops" -> R.drawable.ic_azure_devops
-            "ic_android" -> R.drawable.ic_android
-            "ic_android_auto" -> R.drawable.ic_android_auto
-            "ic_android_tv" -> R.drawable.ic_android_tv
-            "ic_ios" -> R.drawable.ic_ios
-            "ic_mac" -> R.drawable.ic_mac
-            "ic_linux" -> R.drawable.ic_linux
-            "ic_debian" -> R.drawable.ic_debian
-            "ic_windows" -> R.drawable.ic_windows
-            "ic_visual_studio" -> R.drawable.ic_visual_studio
-            "ic_python" -> R.drawable.ic_python
-            "ic_bash" -> R.drawable.ic_bash
-            "ic_c" -> R.drawable.ic_c
-            "ic_cmake" -> R.drawable.ic_cmake
-            "ic_drupal" -> R.drawable.ic_drupal
-            "ic_firefox" -> R.drawable.ic_firefox
-            "ic_safari" -> R.drawable.ic_safari
-            "ic_gherkin" -> R.drawable.ic_gherkin
-            "ic_robot_framework" -> R.drawable.ic_robot_framework
-            "ic_html" -> R.drawable.ic_html
-            "ic_php" -> R.drawable.ic_php
-            "ic_js" -> R.drawable.ic_js
-            "ic_symfony" -> R.drawable.ic_symfony
-            "ic_node" -> R.drawable.ic_node
-            "ic_qt" -> R.drawable.ic_qt
-            "ic_titanium_appcelerator" -> R.drawable.ic_titanium_appcelerator
-            "ic_tizen" -> R.drawable.ic_tizen
-            "ic_windows_phone" -> R.drawable.ic_windows_phone
-            "ic_wordpress" -> R.drawable.ic_wordpress
-            "ic_mattermost" -> R.drawable.ic_mattermost
-            "ic_french" -> R.drawable.ic_french
-            "ic_england" -> R.drawable.ic_england
-            "ic_spain" -> R.drawable.ic_spain
-            "ic_cambodia" -> R.drawable.ic_cambodia
-            else -> R.drawable.ic_default_image
-        }
-    }*/
     private val skillIconMap = mapOf(
+        "ic_kotlin" to R.drawable.ic_kotlin,
+        "ic_java" to R.drawable.ic_java,
+        "ic_jni" to R.drawable.ic_jni,
+        "ic_adb" to R.drawable.ic_adb,
+        "ic_ndk" to R.drawable.ic_ndk,
+        "ic_appium" to R.drawable.ic_appium,
+        "ic_swift" to R.drawable.ic_swift,
+        "ic_obj_c" to R.drawable.ic_obj_c,
+        "ic_compose" to R.drawable.ic_compose,
+        "ic_room" to R.drawable.ic_room,
+        "ic_hilt" to R.drawable.ic_hilt,
+        "ic_koin" to R.drawable.ic_koin,
+        "ic_coil" to R.drawable.ic_coil,
+        "ic_glide" to R.drawable.ic_glide,
+        "ic_google_map" to R.drawable.ic_google_map,
+        "ic_google_drive" to R.drawable.ic_google_drive,
+        "ic_mailjet" to R.drawable.ic_mailjet,
+        "ic_sqlite" to R.drawable.ic_sqlite,
         "ic_git" to R.drawable.ic_git,
         "ic_git_hub" to R.drawable.ic_git_hub,
         "ic_jenkins" to R.drawable.ic_jenkins,
@@ -122,11 +82,60 @@ object ResourcesHelper {
         "ic_cambodia" to R.drawable.ic_cambodia
     )
 
-    fun getDrawableIdByName(name: String): Int {
+    fun getDrawableSkillIdByName(name: String): Int {
         return skillIconMap[name] ?: R.drawable.ic_default_image
+    }
+
+    private val appIconMap = mapOf(
+        "ic_git_hub" to R.drawable.ic_git_hub,
+        "ic_linkedin" to R.drawable.ic_linkedin,
+        "ic_instagram" to R.drawable.ic_instagram,
+        "ic_exomind" to R.drawable.ic_exomind,
+        "ic_tdf" to R.drawable.ic_tdf,
+        "ic_dakar" to R.drawable.ic_dakar,
+        "ic_vuelta" to R.drawable.ic_vuelta,
+        "ic_aviwest" to R.drawable.ic_aviwest,
+        "ic_mojopro" to R.drawable.ic_mojopro,
+        "ic_kantar" to R.drawable.ic_kantar,
+        "ic_detectnow" to R.drawable.ic_detectnow,
+        "ic_ovianet" to R.drawable.ic_ovianet,
+        "ic_generation" to R.drawable.ic_generation,
+        "ic_ithylo" to R.drawable.ic_ithylo,
+    )
+
+    fun getDrawableAppIdByName(name: String): Int {
+        return appIconMap[name] ?: R.drawable.ic_default_image
     }
 
     fun Context.getStringIdByName(name: String): Int {
         return resources.getIdentifier(name, "drawable", packageName)
+    }
+
+    val experienceStringMap = mapOf(
+        "experience_exomind_duration" to R.string.experience_exomind_duration,
+        "experience_exomind_title" to R.string.experience_exomind_title,
+        "experience_exomind_short_description" to R.string.experience_exomind_short_description,
+        "experience_exomind_description" to R.string.experience_exomind_description,
+
+        "experience_aviwest_duration" to R.string.experience_aviwest_duration,
+        "experience_aviwest_title" to R.string.experience_aviwest_title,
+        "experience_aviwest_short_description" to R.string.experience_aviwest_short_description,
+        "experience_aviwest_description" to R.string.experience_aviwest_description,
+
+        "experience_kantar_duration" to R.string.experience_kantar_duration,
+        "experience_kantar_title" to R.string.experience_kantar_title,
+        "experience_kantar_short_description" to R.string.experience_kantar_short_description,
+        "experience_kantar_description" to R.string.experience_kantar_description,
+
+        "experience_ovianet_duration" to R.string.experience_ovianet_duration,
+        "experience_ovianet_title" to R.string.experience_ovianet_title,
+        "experience_ovianet_short_description" to R.string.experience_ovianet_short_description,
+        "experience_ovianet_description" to R.string.experience_ovianet_description,
+    )
+    fun getStringExpIdByName(name: String): Int {
+        return experienceStringMap[name] ?: R.string.error
+    }
+    fun getStringIdByName(name: String): Int {
+        return experienceStringMap[name] ?: R.string.error
     }
 }
