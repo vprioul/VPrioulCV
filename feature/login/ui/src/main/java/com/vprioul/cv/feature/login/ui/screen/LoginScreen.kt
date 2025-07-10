@@ -105,7 +105,7 @@ fun LoginScreen(
             val linkProject = stringResource(R.string.login_link_project)
             MinimalButton(
                 modifier = Modifier.padding(DpLarge),
-                text = stringResource(R.string.login_link_project),
+                text = stringResource(R.string.login_github),
                 onClick = {
                     viewModel.onClickGit(context, linkProject)
                 }

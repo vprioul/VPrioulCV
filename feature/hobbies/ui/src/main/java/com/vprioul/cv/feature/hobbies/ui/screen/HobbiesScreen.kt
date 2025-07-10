@@ -59,18 +59,21 @@ fun HobbiesScreen(
     }
     LaunchedEffect(uiState.selectedRoadTrip?.cities?.first()) {
         uiState.selectedRoadTrip?.let { country ->
-            if (country.cities.size > 1) {
+            if (country.cities.size == 1) {
+                cameraPositionState.animate(
+                    update = CameraUpdateFactory.newLatLngZoom(
+                        LatLng(country.cities.first().lat, country.cities.first().lng),
+                        10f
+                    ),
+                    durationMs = 1000
+                )
+            } else if (country.cities.size > 1) {
                 val boundsBuilder = LatLngBounds.builder()
                 country.cities.forEach { boundsBuilder.include(LatLng(it.lat, it.lng)) }
                 val bounds = boundsBuilder.build()
                 cameraPositionState.animate(
                     update = CameraUpdateFactory.newLatLngBounds(bounds, 100),
                     durationMs = 1000
-                )
-            } else if (country.cities.isNotEmpty()) {
-                CameraPosition.fromLatLngZoom(
-                    LatLng(country.cities.first().lat, country.cities.first().lng),
-                    10f
                 )
             }
         }
@@ -160,7 +163,7 @@ fun ColumnScope.TravelMap(
             modifier = Modifier
                 .padding(all = DpNormal)
                 .align(Alignment.CenterHorizontally),
-            label = "${stringResource(ResourcesHelper.getStringTravelIdByName(roadtrip.name))} - ${roadtrip.year}",
+            label = "${stringResource(ResourcesHelper.getStringTravelIdByName(roadtrip.label))} - ${roadtrip.year}",
             style = MaterialTheme.typography.titleMedium,
         )
     }

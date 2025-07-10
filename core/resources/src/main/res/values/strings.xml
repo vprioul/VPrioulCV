@@ -1,188 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Default -->
-    <string name="app_name">TemplateVP</string>
+    <string name="app_name">VPrioulCV</string>
     <string name="ok">Ok</string>
-    <string name="cancel">Annuler</string>
-    <string name="search">Recherche</string>
-    <string name="validate">Valider</string>
-    <string name="error">Erreur</string>
-    <string name="name">Nom</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="validate">Validate</string>
+    <string name="error">Error</string>
+    <string name="name">Name</string>
     <string name="message">Message</string>
-    <string name="more_info">Plus d’informations</string>
-    <string name="sending">Envoi en cours ...</string>
-    <string name="send">Envoyer message</string>
-    <string name="send_email_with">Envoyer un email avec</string>
-    <string name="share_with">Partager avec</string>
+    <string name="more_info">More informations</string>
+    <string name="sending">Sending ...</string>
+    <string name="send">Send message</string>
+    <string name="send_email_with">Send email with</string>
+    <string name="share_with">Share with</string>
     <string name="description">Description</string>
-    <string name="location">Localisation</string>
+    <string name="location">Location</string>
     <string name="email">Email</string>
-    <string name="phone_number">Numéro de téléphone</string>
+    <string name="phone_number">Phone number</string>
 
     <!-- Login -->
-    <string name="login_name">Identifiant</string>
-    <string name="login_password">Mot de passe</string>
+    <string name="login_name">Login</string>
+    <string name="login_password">Password</string>
     <string name="vincent">Vincent</string>
     <string name="prioul">Prioul</string>
-    <string name="login_error">Erreur du login ou mot de passe, veuillez demander à Vincent Prioul ou chercher sur le repo Git Hub si vous trouvez le mot de passe</string>
-    <string name="login_retrieve_login">Veuillez demander à Vincent Prioul ou chercher sur le repo Git Hub si vous trouvez le mot de passe</string>
-    <string name="login_link_project">Projet Git Hub</string>
+    <string name="login_error">Incorrect login or password. Please ask Vincent Prioul or check the GitHub repository for the password.</string>
+    <string name="login_retrieve_login">Please ask Vincent Prioul or check the GitHub repository for the password.</string>
+    <string name="login_github">GitHub Project</string>
+    <string name="login_link_project">https://github.com/vprioul/VPrioulCV</string>
 
     <!-- Home -->
     <string name="home_title">Home</string>
     <string name="home_name">Vincent Prioul</string>
-    <string name="home_informations">34 ans, habite à Rennes, France</string>
-    <string name="home_image">Image de Vincent Prioul</string>
-    <string name="home_job">Ingénieur développeur d’applications mobiles Android/iOS</string>
-    <string name="home_bio">En recherche active d’un poste dans le développement d’applications mobiles Android ou iOS</string>
-    <string name="home_download">Télécharger le CV</string>
-    <string name="home_share">Partager le CV</string>
-    <string name="home_error_share">Aucune application installée pour partager le texte</string>
+    <string name="home_informations">34 years old, living in Rennes, France</string>
+    <string name="home_image">Image of Vincent Prioul</string>
+    <string name="home_job">Mobile application engineer for Android/iOS</string>
+    <string name="home_bio">Actively seeking a position in Android or iOS mobile application development</string>
+    <string name="home_download">Download CV</string>
+    <string name="home_share">Share CV</string>
+    <string name="home_error_share">No app installed to share the text</string>
     <string name="home_url_cv">https://drive.google.com/file/d/1wF_KjxiaWzc-1KScvurkrwQt184x3adG/view?usp=drive_link</string>
-    <string name="home_reference">Mes références</string>
+    <string name="home_reference">My references</string>
 
     <!-- References -->
     <string name="references_tdf">Tour de France</string>
     <string name="references_tdf_url">https://play.google.com/store/apps/details?id=com.aso.tdf2012int&amp;hl=fr</string>
-    <string name="references_tdf_description">Icône Tour de France</string>
+    <string name="references_tdf_description">Tour de France icon</string>
     <string name="references_dakar">Dakar</string>
     <string name="references_dakar_url">https://play.google.com/store/apps/details?id=com.aso.dakar&amp;hl=fr</string>
-    <string name="references_dakar_description">Icône Dakar</string>
+    <string name="references_dakar_description">Dakar icon</string>
     <string name="references_vuelta">Vuelta</string>
     <string name="references_vuelta_url">https://play.google.com/store/apps/details?id=com.unipublic.vuelta&amp;hl=fr</string>
-    <string name="references_vuelta_description">Icône Vuelta</string>
+    <string name="references_vuelta_description">Vuelta icon</string>
     <string name="references_mojopro">MojoPro</string>
     <string name="references_mojopro_url">https://play.google.com/store/apps/details?id=com.aviwest.mojopro&amp;hl=fr</string>
-    <string name="references_mojopro_description">Icône MojoPro</string>
+    <string name="references_mojopro_description">MojoPro icon</string>
     <string name="references_detectnow">Detect Now</string>
     <string name="references_detectnow_url">https://play.google.com/store/apps/details?id=com.kantarmedia.detectnow.app&amp;hl=fr</string>
-    <string name="references_detectnow_description">Icône Detect Now</string>
+    <string name="references_detectnow_description">Detect Now icon</string>
     <string name="references_generation">Generation</string>
     <string name="references_generation_url">https://play.google.com/store/search?q=generation&amp;c=apps&amp;hl=fr</string>
-    <string name="references_generation_description">Icône Generation</string>
+    <string name="references_generation_description">Generation icon</string>
     <string name="references_ithylo">Ithylo</string>
     <string name="references_ithylo_url">https://play.google.com/store/apps/details?id=com.ithylo&amp;hl=fr</string>
-    <string name="references_ithylo_description">Icône Ithylo</string>
-
+    <string name="references_ithylo_description">Ithylo icon</string>
 
     <!-- Experiences -->
     <string name="experiences_title">Experiences</string>
-    <string name="experience_exomind_title">Ingénieur développeur d’applications mobiles Android</string>
+    <string name="experience_exomind_title">Mobile Application Engineer (Android)</string>
     <string name="experience_exomind_company">EXOMIND</string>
-    <string name="experience_exomind_duration">nov. 2023 - avr. 2025 · 1 an 6 mois</string>
-    <string name="experience_exomind_location">Rennes, Bretagne, France · Hybride</string>
+    <string name="experience_exomind_duration">Nov 2023 - Apr 2025 · 1 year 6 months</string>
+    <string name="experience_exomind_location">Rennes, Brittany, France · Hybrid</string>
     <string name="experience_exomind_short_description">
-        Développement et optimisation d’applications Android et Android Auto pour ASO, Renault, DMA Armatures et IER/Blue Systems. Ajout de nouvelles fonctionnalités en Kotlin avec Jetpack Compose en Clean Architecture ou architecture modulaire. Gestion de la relation client et coordination sur les différents projets.
+        - Development and optimization of Android and Android Auto applications for ASO, Renault, DMA Armatures, and IER/Blue Systems.\n\n
+        - Implementation of new features in Kotlin using Jetpack Compose within a Clean Architecture or modular architecture framework.\n\n
+        - Client relationship management and project coordination across various initiatives.
     </string>
     <string name="experience_exomind_description">
-        - Développement des applications mobiles Android (ASO Tour de France/Vuelta/Dakar) utilisées par plusieurs milliers d\’utilisateurs.\n
-        Gestion de la relation client.\n
-        Correction des problèmes vus par SonarCloud (refactorisation, dépréciation, diminution de lignes de codes par lambda, fonction, ...).\n
-        Développement de nouvelles features sur l\’application (Kotlin / State / Flow / Clean architecture / NavGraph).\n
-        Changement de l\’UI layout en Jetpack Compose (Utilisation de HorizontalPager, TabRow, LazyColumn, ...).\n
-        \n
-        - Développement application Android Auto (Renault) pour les concessions automobile.\n
-        Gestion de la relation client.\n
-        Développement de nouvelles features sur l’application (Kotlin / Jetpack Compose / State / Flow / Clean architecture).\n
-        Adaptation de l\’UI avec différents écrans en portrait (10.4 et 12) ou paysage (9 et 10.1).\n
-        Ajout de données de la voiture en temps réel de manière asynchrone et périodique.\n
-        Résolution de bugs (clavier, texte, navigation, ...).\n
-        Tests unitaires en TDD.\n
-        Ajout de nouveaux calculs en comparaison avec différents moteurs.\n
-        Utilisation d\’un émulateur spécifique Android Auto de la marque et voiture créé par le client.\n
-        Utilisation des librairies Maptiler et Mailjet.\n
-        \n
-        - Développement application mobile Android (DMA Armatures) pour l\’entreprise.\n
-        Recompilation du projet qui n\’a pas évolué depuis 3 ans.\n
-        Mise à jour de toutes les librairies (LiveData, Hilt, Kotlin, Gradle, ...).\n
-        \n
-        - Management pour les applications mobiles Android (IER/Blue systems) pour l\’entreprise.\n
-        Gestion de la relation client.\n
-        Management des tickets Jira pour les applications mobiles Android TePV, TeFPS, SmartPatrol, IER Services, ...\n
+        - Development and optimization of Android and Android Auto applications for ASO, Renault, DMA Armatures, and IER/Blue Systems.\n\n
+        - Implementation of new features in Kotlin using Jetpack Compose within a Clean Architecture or modular architecture framework.\n\n
+        - Client relationship management and project coordination across various initiatives.
     </string>
-    <string name="experience_aviwest_title">Ingénieur développeur d\’applications mobiles Android</string>
+    <string name="experience_aviwest_title">Android Mobile Applications Engineer</string>
     <string name="experience_aviwest_company">Aviwest/Haivision</string>
-    <string name="experience_aviwest_duration">jan. 2020 - dec. 2022 · 3 ans</string>
-    <string name="experience_aviwest_location">Saint Grégoire, Bretagne, France · Hybride/COVID</string>
+    <string name="experience_aviwest_duration">Jan 2020 – Dec 2022 · 3 years</string>
+    <string name="experience_aviwest_location">Saint-Grégoire, Brittany, France · Hybrid/COVID</string>
     <string name="experience_aviwest_short_description">
-        Mise à jour des produits MojoSDK et MojoPro sur Android pour aligner les fonctionnalités avec iOS. Intégration de nouvelles fonctionnalités en C/C++ via JNI, support des architectures 64 bits, migration vers AndroidX, CMake 3.10.2, NDK 21. Ajout du support des caméras externes (ONVIF, USB/UVC), API Camera2, intercom SIP, HEVC live/record, Video Return (VLC, Larix) et optimisation énergétique (ScreenSaver). Développement en Kotlin, Java, JNI avec tests automatisés sous Appium et RobotFramework.
+        - Update of MojoSDK and MojoPro products on Android to align functionalities with iOS.\n\n
+        - Integration of new features in C/C++ via JNI, support for 64-bit architectures, and migration to AndroidX, CMake 3.10.2, and NDK 21.\n\n
+        - Added support for external cameras (ONVIF, USB/UVC), Camera2 API, SIP intercom, HEVC live/record, Video Return (VLC, Larix), and energy optimization (ScreenSaver).\n\n
+        - Development in Kotlin, Java, and JNI, with automated testing using Appium and RobotFramework.
     </string>
     <string name="experience_aviwest_description">
-        Mise à jour des produits MojoSDK et MojoPro sur Android pour avoir les mêmes fonctionnalités que l\’application MojoPro iOS. Utilisés dans le monde entier par des journalistes dont les JO Paris 2024.\n
-        \n
-        Reprise des projets : Mise à jour des derniers SDK Android, NDK, gradle, architectures, librairies, frameworks, ... Intégration des nouvelles fonctionnalités de la couche bas niveau (Core) en C/C++ avec le wrapper JNI. Ajout des architectures 64 bits (arm64 et x86_64). Passage à AndroidX, CMake 3.10.2, NDK 21.\n
-        \n
-        Ajout d\’une nouvelle fonctionnalité, utilisation d\’une caméra externe connectée avec le protocole ONVIF.\n
-        \n
-        Ajout de l\’API Caméra 2 au SDK avec réglages des paramètres white balance, ISO, zoom, focus, flash, résolution, framerate, ...\n
-        \n
-        Rotation de tous les composants et vues de paysage à portrait.\n
-        \n
-        Ajout de la fonctionnalité intercom sip qui permet d\’avoir une communication audio en temps réel.\n
-        \n
-        Ajout de la fonctionnalité HEVC en live et record.\n
-        \n
-        Mise en place de test automatique fonctionnel avec Appium Android/iOS (RobotFramework, Python).\n
-        \n
-        Ajout d\’une fonctionnalité gyroscope pour aligner verticalement et horizontalement le téléphone.\n
-        \n
-        Ajout de la fonctionnalité Video Return avec le framework VLC et Larix pour utiliser un flux SRT simultanément avec la caméra.
-        \n
-        Ajout de la fonctionnalité ScreenSaver pour utiliser moins de puissance sur le téléphone en fonction de la température. Arrêt de la preview, arrêt des animations, diminution de la luminosité, arrêt de la géolocalisation. Analyse des performances CPU, mémoire et batterie.\n
-        \n
-        Ajout de la fonctionnalité USB Camera avec l\’intégration d\’une librairie C/C++ pour détecter une caméra branchée en USB avec le protocole UVC. Pour ainsi utiliser les images de la caméra branchée en USB sur l\’application MoJoPro. \n
+        - Update of MojoSDK and MojoPro products on Android to align functionalities with iOS.\n\n
+        - Integration of new features in C/C++ via JNI, support for 64-bit architectures, and migration to AndroidX, CMake 3.10.2, and NDK 21.\n\n
+        - Added support for external cameras (ONVIF, USB/UVC), Camera2 API, SIP intercom, HEVC live/record, Video Return (VLC, Larix), and energy optimization (ScreenSaver).\n\n
+        - Development in Kotlin, Java, and JNI, with automated testing using Appium and RobotFramework.
     </string>
-    <string name="experience_kantar_title">Ingénieur développeur d\’applications mobiles Android/iOS</string>
+    <string name="experience_kantar_title">Mobile Applications Engineer Android/iOS</string>
     <string name="experience_kantar_company">Kantar Media</string>
-    <string name="experience_kantar_duration">juil. 2017 - sep. 2019 · 2 ans 3 mois</string>
-    <string name="experience_kantar_location">Rennes, Bretagne, France · site</string>
+    <string name="experience_kantar_duration">Jul 2017 – Sep 2019 · 2 years 3 months</string>
+    <string name="experience_kantar_location">Rennes, Brittany, France · On-site</string>
     <string name="experience_kantar_short_description">
-        Développement de l’application DetectNow sur iOS et Android (App Store &amp; Google Play). Mise à jour du SDK de détection de tatouage numérique audio en C/C++ avec les exemples sur plusieurs plateformes (Android/iOS/MacOS) et leurs différents langages (Java/Kotlin/Objective-C/Swift). Création de tests automatisés pour Android et iOS (ADB, iOS Deploy, Python) et optimisation des performances CPU/mémoire.
+        - Development of the DetectNow application for iOS and Android (App Store &amp; Google Play).\n\n
+        - Update of the audio digital watermark detection SDK in C/C++, with examples across multiple platforms (Android, iOS, macOS) and various programming languages (Java, Kotlin, Objective-C, Swift).\n\n
+        - Implementation of automated testing for Android and iOS (ADB, iOS Deploy, Python) and CPU/memory performance optimization.
     </string>
     <string name="experience_kantar_description">
-        Développement de l\’application DetectNow sur iOS et Android disponible sur les stores (AppStore et Google Play).\n
-        \n
-        Mise à jour avec les dernières technologies avec exemples sous plusieurs plateformes (Android, iOS, MacOS, Windows, Linux) sur le SDK de détection de tatouage numérique audio. Utilisé dans le monde entier pour faire des statistiques.\n
-        \n
-        Développement et restructuration de l’application mobile Android (Java Android) avec intégration de librairies JNI (C/C++).\n
-        \n
-        Formation iOS Swift 3 avec l\’organisme de formation PLB. Développement de l’application mobile iOS (Swift) avec passage de Swift 2 à Swift 4.\n
-        \n
-        Développement d’application mobile Android de détection de tatouage numérique. Création d’une application avec 2 détecteurs intégrant les 2 dernières technologies.\n
-        \n
-        Création et mise à jour des tests automatiques pour la création du tatouage numérique. Tests automatiques sur mobile réalisé avec ADB (Android Debug Bridge) pour Android et iOS Deploy/iDeviceInstaller/libiMobileDevice sur iOS. Lancement des différentes commandes avec python. \n
-        \n
-        Création d’un exemple de la librairie dans le langage Kotlin.\n
-        \n
-        Changement de la librairie static vers un framework pour iOS.\n
-        \n
-        Création d\’un concept d\’une application mobile avec un service d\’écoute audio pour les nouvelles et prochaines versions d\’Android Pie, Q., ...\n
-        \n
-        Création de test automatisé Android pour les performances CPU et mémoire de la librairie.\n
+        - Development of the DetectNow application for iOS and Android (App Store &amp; Google Play).\n\n
+        - Update of the audio digital watermark detection SDK in C/C++, with examples across multiple platforms (Android, iOS, macOS) and various programming languages (Java, Kotlin, Objective-C, Swift).\n\n
+        - Implementation of automated testing for Android and iOS (ADB, iOS Deploy, Python) and CPU/memory performance optimization.
     </string>
-    <string name="experience_ovianet_title">Ingénieur développeur d\’applications mobiles</string>
+    <string name="experience_ovianet_title">Mobile Applications Engineer</string>
     <string name="experience_ovianet_company">Ovianet</string>
-    <string name="experience_ovianet_duration">mars 2015 - dec. 2016 · 1 an 10 mois</string>
-    <string name="experience_ovianet_location">Rennes, Bretagne, France · site</string>
+    <string name="experience_ovianet_duration">Mar 2015 – Dec 2016 · 1 year 10 months</string>
+    <string name="experience_ovianet_location">Rennes, Brittany, France · On-site</string>
     <string name="experience_ovianet_short_description">
-        Création, retour et mises à jours sur plusieurs applications mobiles Android avec différentes fonctionnalités. Mémoire de fin d’études sur la qualité des applications mobiles de l’entreprise Ovianet. Création d’un serveur d’intégration continue Jenkins avec des tests fonctionnels Calabash iOS et Android.
+        - Development, maintenance, and updates of multiple Android mobile applications with various features.\n\n
+        - Study on mobile application quality at Ovianet.\n\n
+        - Implementation of a Jenkins continuous integration server with functional testing using Calabash for iOS and Android.
     </string>
     <string name="experience_ovianet_description">
-        Création de plusieurs applications mobiles Android ainsi que des mises à jour et retour sur des applications mobiles Android existantes pour des clients.\n
-        \n
-        - Création d’une application dans le secteur de la vie quotidienne sur smartphone/tablette/montre connectées avec des fonctionnalités de messagerie instantanée, 2 comptes utilisateurs différents, paiement in app, enregistrement et affichage de photos/vidéos, réseaux sociaux (Facebook, Twitter, Google Plus, Instagram), API REST (Strongloop Loopback), notification, google map, géolocalisation, animations diverses\n
-        - Création d’une application dans le secteur de l’automobile avec des fonctionnalités d’enregistrement et affichage de photos, API REST (Strongloop Loopback), envoi et réception Bluetooth\n
-        - Mise à jour d’une application dans le secteur de la productivité smartphone/tablette web application avec des fonctionnalités caméra en temps réel et enregistrement, partage d’une vidéo sur Youtube, changement de vue lors d’un changement d’orientation\n
-        - Création d’une application dans le secteur du sport avec des fonctionnalités Google Map, géolocalisation, API REST (Strongloop Loopback), messagerie instantanée, notification, SQLite, animations diverses\n
-        - Mise à jour d’une application dans le secteur du sport avec des fonctionnalités Google Map, géolocalisation, API REST, notification, calendrier\n
-        - Mise à jour d’une application dans le secteur de la productivité avec des fonctionnalités API REST, animation diverse, gestion de données\n
-        - Création d\’une application mobile Android dans le secteur des réseaux sociaux avec des systèmes de recherches élaborés.\n
-        - Création d\’une application mobile Android avec scan de code-barre pour retrouver des produits sur une base de données serveur et sqlite.\n
-        - Création et publication d\’une application mobile Windows Phone 8.1 webview.\n
-        \n
-        - Analyse, recherche, faisabilité, développement, intégration, déploiement d\’un serveur d\’intégration continue Jenkins avec des tests automatisés Calabash. \n
-        \n
-        - Formateur Android pour les étudiants en Licence 3 dans l\’école SupInfo Rennes\n
+        - Development, maintenance, and updates of multiple Android mobile applications with various features.\n\n
+        - Study on mobile application quality at Ovianet.\n\n
+        - Implementation of a Jenkins continuous integration server with functional testing using Calabash for iOS and Android.
     </string>
     <string name="experience_mobizel_title">Développeur d\’applications mobiles Android</string>
     <string name="experience_mobizel_company">Mobizel</string>
@@ -216,114 +157,115 @@
     </string>
     
     <!-- Skills -->
-    <string name="skills_title">Compétences</string>
+    <string name="skills_title">Skills</string>
     <string name="skills_mobile">Mobile</string>
-    <string name="skills_libraries">Librairies</string>
-    <string name="skills_tools">Outils</string>
-    <string name="skills_platform">Système d’exploitation</string>
-    <string name="skills_others">Autres</string>
-    <string name="skills_soft">Langues</string>
-    <string name="skills_language_french">Français</string>
-    <string name="skills_language_england">Anglais</string>
-    <string name="skills_language_spain">Espagnol</string>
-    <string name="skills_language_cambodia">Cambodgien</string>
-    
+    <string name="skills_libraries">Libraries</string>
+    <string name="skills_tools">Tools</string>
+    <string name="skills_platform">Operating System</string>
+    <string name="skills_others">Others</string>
+    <string name="skills_soft">Languages</string>
+    <string name="skills_language_french">French</string>
+    <string name="skills_language_england">English</string>
+    <string name="skills_language_spain">Spanish</string>
+    <string name="skills_language_cambodia">Khmer (Cambodian)</string>
+
     <!-- Educations -->
-    <string name="education_title">Educations</string>
+    <string name="education_title">Education</string>
     <string name="education_plb_school">PLB Rennes</string>
     <string name="education_plb_year">2017</string>
-    <string name="education_plb_degree">Formation iOS Swift</string>
-    <string name="education_plb_description">Formation débutant iOS Swift 3. Cette formation vous propose d\’apprendre le langage Swift d\’Apple, sa syntaxe bien sûr et sa philosophie, les particularités de l’environnement Xcode pour Swift et les différences avec Objective C.</string>
+    <string name="education_plb_degree">iOS Swift Training</string>
+    <string name="education_plb_description">Beginner-level iOS Swift 3 training. This course teaches Apple’s Swift language—its syntax, philosophy, and the specific features of Xcode for Swift—and how it differs from Objective-C.</string>
     <string name="education_supinfo_school">SupInfo Rennes</string>
-    <string name="education_supinfo_year">2014-2016</string>
-    <string name="education_supinfo_degree">Master of science 1 et 2</string>
-    <string name="education_supinfo_description">Projet de fin d\’études : Comment garantir la qualité des applications mobiles dans l\’entreprise Ovianet ? Analyse, recherche, faisabilité, développement, intégration, déploiement d\’un serveur d\’intégration continue Jenkins avec des tests automatisés Calabash. Formation de 2 ans école SUPINFO de Rennes.</string>
+    <string name="education_supinfo_year">2014–2016</string>
+    <string name="education_supinfo_degree">Master of Science 1 and 2</string>
+    <string name="education_supinfo_description">Final year project: How to ensure the quality of mobile apps at Ovianet? Analysis, research, feasibility, development, integration, and deployment of a Jenkins continuous integration server with automated Calabash tests. Two-year training at SUPINFO Rennes.</string>
     <string name="education_irm_school">IUT La Rochelle</string>
-    <string name="education_irm_year">2012-2013"</string>
-    <string name="education_irm_degree">Licence professionnelle IRM (Informatique Répartie et Mobile)</string>
-    <string name="education_irm_description">Stage de 6 mois (Tactilia).</string>
+    <string name="education_irm_year">2012–2013</string>
+    <string name="education_irm_degree">Professional Degree in Distributed and Mobile Computing (IRM)</string>
+    <string name="education_irm_description">6-month internship at Tactilia.</string>
     <string name="education_buroscope_school">Buroscope Rennes</string>
     <string name="education_buroscope_year">2012</string>
-    <string name="education_buroscope_degree">Formation PHP/SQL</string>
-    <string name="education_buroscope_description">Formation Php/Html/Css SQL création de site web sur les glaces avec une base de donnée + période d\’application de 2 mois et demi en entreprise (Tactilia).</string>
-    <string name="education_iris_school">Lycée Maupertuis Saint Malo</string>
-    <string name="education_iris_year">2009-2011</string>
-    <string name="education_iris_degree">BTS IRIS (Informatique et Réseaux Industriels pour les Services techniques)</string>
-    <string name="education_iris_description">Stage de 1 mois et demi en entreprise fin d\’année 2010 (Credit Mutuel Arkea).</string>
-    <string name="education_bac_school">Lycée Brequigny Rennes</string>
-    <string name="education_bac_year">2006-2009</string>
-    <string name="education_bac_degree">BAC STI (Science Technique de l’Ingénieur)</string>
-    <string name="education_bac_description">Projet de fin d\’année 2009 sur un panneau solaire.</string>
+    <string name="education_buroscope_degree">PHP/SQL Training</string>
+    <string name="education_buroscope_description">PHP/HTML/CSS and SQL training—website creation about ice creams with a database + 2.5-month company internship (Tactilia).</string>
+    <string name="education_iris_school">Maupertuis High School, Saint Malo</string>
+    <string name="education_iris_year">2009–2011</string>
+    <string name="education_iris_degree">BTS IRIS (Computer Science and Industrial Networks for Technical Services)</string>
+    <string name="education_iris_description">1.5-month internship at the end of 2010 (Credit Mutuel Arkea).</string>
+    <string name="education_bac_school">Brequigny High School, Rennes</string>
+    <string name="education_bac_year">2006–2009</string>
+    <string name="education_bac_degree">STI Baccalaureate (Engineering Science and Technologies)</string>
+    <string name="education_bac_description">Final year project in 2009 on a solar panel.</string>
 
     <!-- Hobbies -->
-    <string name="hobbies_title">Loisirs</string>
+    <string name="hobbies_title">Hobbies</string>
     <string name="hobbies_sport">Sports</string>
-    <string name="hobbies_travel">Voyages</string>
+    <string name="hobbies_travel">Travel</string>
     <string name="hobbies_sports_foot">Football</string>
-    <string name="hobbies_sports_foot_bio">Dans plusieurs clubs (FC Stade Rennais, AS Saint Jacques Foot, TA Rennes Foot, AS Chantepie, Odia Football) depuis l’âge de 7 ans. Plusieurs blessures également dont 2 ligaments croisés antérieur</string>
-    <string name="hobbies_sports_run">Course à pied</string>
-    <string name="hobbies_sports_run_bio">Plusieurs courses en compétition dont 2 fois 24km Urban Trail de Rennes, 24km Urban Trail Naoned, 2 fois 13km trail du Böel, 10km urban trail Kerlann, 8km et 10km Roazhon run, 21km semi Cancale - Saint Malo, 12km Intrail Murros</string>
-    <string name="hobbies_sports_dive">Plongée sous-marine (Niveau 2 FFESSM et PADI Advanced Open Water)</string>
-    <string name="hobbies_sports_dive_bio">Club de plongée du CSGR j’ai réalisé 15 plongées dans le monde (5 en Malaisie, 1 Corse, 2 île de la Réunion, 7 Seychelles)</string>
+    <string name="hobbies_sports_foot_bio">Played in several clubs (FC Stade Rennais, AS Saint Jacques Foot, TA Rennes Foot, AS Chantepie, Odia Football) since age 7. Also experienced multiple injuries, including two ACL tears.</string>
+    <string name="hobbies_sports_run">Run</string>
+    <string name="hobbies_sports_run_bio">Several competitions including 2× 24km Urban Trail Rennes, 24km Urban Trail Naoned, 2× 13km Böel Trail, 10km Urban Trail Kerlann, 8km &amp; 10km Roazhon Run, 21km half marathon Cancale - Saint Malo, 12km Intrail Murros.</string>
+    <string name="hobbies_sports_dive">Scuba Diving (FFESSM Level 2 and PADI Advanced Open Water)</string>
+    <string name="hobbies_sports_dive_bio">With the CSGR diving club: completed 15 dives around the world (5 in Malaysia, 1 in Corsica, 2 in Réunion Island, 7 in the Seychelles).</string>
     <string name="hobbies_sports_padel">Padel</string>
-    <string name="hobbies_sports_padel_bio">En fait 1 fois par semaine depuis 2022 niveau 5 était classé 20000ème</string>
+    <string name="hobbies_sports_padel_bio">Play once a week since 2022, level 5, ranked around 20,000th.</string>
     <string name="hobbies_sports_ski">Ski</string>
-    <string name="hobbies_sports_ski_bio">Je maîtrise toutes les pistes en ski et snowboard y va tous les 2, 3 ans</string>
+    <string name="hobbies_sports_ski_bio">Confident on all slopes in both skiing and snowboarding. Go skiing every 2 to 3 years.</string>
     <string name="hobbies_sports_surf">Surf</string>
-    <string name="hobbies_sports_surf_bio">Pratique le surf sur les plages de Quiberon, Pornichet, Lacanau et j’ai déjà fait des sessions à Nazaré, Bayonne</string>
-    <string name="hobbies_sports_bike">Vélo</string>
-    <string name="hobbies_sports_bike_bio">Pour se balader de temps en temps</string>
+    <string name="hobbies_sports_surf_bio">Surf on beaches in Quiberon, Pornichet, Lacanau; also had sessions in Nazaré and Bayonne.</string>
+    <string name="hobbies_sports_bike">Cycle</string>
+    <string name="hobbies_sports_bike_bio">Occasional bike rides.</string>
     <string name="hobbies_sports_wake">Wakeboard</string>
-    <string name="hobbies_sports_wake_bio">Essaye de faire des sessions tous les ans à Nozay, la Rincerie et en mer</string>
-    <string name="hobbies_sports_swim">Piscine</string>
-    <string name="hobbies_sports_swim_bio">Pratiquer lorsque j’étais jeune en compétition à la piscine de Villejean. De temps en temps dans les piscines Rennaises.</string>
+    <string name="hobbies_sports_wake_bio">Try to do sessions every year at Nozay, La Rincerie, and at sea.</string>
+    <string name="hobbies_sports_swim">Swim</string>
+    <string name="hobbies_sports_swim_bio">Used to compete as a child at Villejean pool. Occasionally swim in Rennes pools.</string>
     <string name="hobbies_sports_squash">Squash</string>
-    <string name="hobbies_sports_squash_bio">Pratiquer en squash entreprise avec Aviwest</string>
+    <string name="hobbies_sports_squash_bio">Played during corporate squash sessions with Aviwest.</string>
 
-    <string name="hobbies_travel_iceland">Islande</string>
+    <string name="hobbies_travel_iceland">Iceland</string>
     <string name="hobbies_travel_seychelles">Seychelles</string>
-    <string name="hobbies_travel_thailand">Thaïlande - Cambodge</string>
-    <string name="hobbies_travel_malaisian">Malaisie - Singapour</string>
-    <string name="hobbies_travel_reunion">Île de la Réunion</string>
+    <string name="hobbies_travel_thailand">Thailand - Cambodia</string>
+    <string name="hobbies_travel_malaisian">Malaysia - Singapore</string>
+    <string name="hobbies_travel_reunion">Réunion Island</string>
     <string name="hobbies_travel_guadeloupe">Guadeloupe</string>
     <string name="hobbies_travel_martinique">Martinique</string>
-    <string name="hobbies_travel_sweden">Suède Tournoi de foot Gothia Cup</string>
-    <string name="hobbies_travel_croatia">Croatie</string>
-    <string name="hobbies_travel_spain_portugal">Espagne - Portugal</string>
-    <string name="hobbies_travel_spain">Barcelone</string>
-    <string name="hobbies_travel_portugal">Sud du Portugal</string>
-    <string name="hobbies_travel_sicile">Italie (Sicile - Rome)</string>
-    <string name="hobbies_travel_italia">Italie (Turin - Gênes - Pise)</string>
-    <string name="hobbies_travel_belgium">Belgique - Pays Bas - Strasbourg - Allemagne</string>
-    <string name="hobbies_travel_malta">Malte</string>
+    <string name="hobbies_travel_sweden">Sweden – Gothia Cup Football Tournament</string>
+    <string name="hobbies_travel_croatia">Croatia</string>
+    <string name="hobbies_travel_spain_portugal">Spain - Portugal</string>
+    <string name="hobbies_travel_spain">Barcelona</string>
+    <string name="hobbies_travel_portugal">Southern Portugal</string>
+    <string name="hobbies_travel_sicile">Italy (Sicily - Rome)</string>
+    <string name="hobbies_travel_italia">Italy (Turin - Genoa - Pisa)</string>
+    <string name="hobbies_travel_belgium">Belgium - Netherlands - Strasbourg - Germany</string>
+    <string name="hobbies_travel_malta">Malta</string>
     <string name="hobbies_travel_hungary">Budapest</string>
     <string name="hobbies_travel_nederland">Amsterdam</string>
-    <string name="hobbies_travel_england">Angleterre</string>
-    <string name="hobbies_travel_usa">États-Unis côte Est</string>
-    <string name="hobbies_travel_marocco">Maroc</string>
-    <string name="hobbies_travel_switzerland">Annecy - Genève</string>
+    <string name="hobbies_travel_england">London</string>
+    <string name="hobbies_travel_usa">USA East Coast</string>
+    <string name="hobbies_travel_marocco">Morocco</string>
+    <string name="hobbies_travel_switzerland">Annecy - Geneva</string>
     <string name="hobbies_travel_lille">Lille - Bruges</string>
-    <string name="hobbies_travel_corse">Corse</string>
+    <string name="hobbies_travel_corse">Corsica</string>
     <string name="hobbies_travel_strabourg">Strasbourg</string>
-    <string name="hobbies_travel_lyon">Lyon salon Sirha</string>
+    <string name="hobbies_travel_lyon">Lyon – Sirha Trade Show</string>
     <string name="hobbies_travel_surf">France - Surf</string>
-    <string name="hobbies_travel_ski">France - Sport d’hiver</string>
-    <string name="hobbies_travel_autria">République Tchèque - Autriche - Slovaquie</string>
+    <string name="hobbies_travel_ski">France - Winter Sports</string>
+    <string name="hobbies_travel_autria">Czech Republic - Austria - Slovakia</string>
 
     <!-- Contact -->
     <string name="contact_title">Contact</string>
-    <string name="contact_social_network">Réseaux sociaux</string>
-    <string name="contact_phone">Appeler</string>
-    <string name="phone_error">Aucune application pour appeler le numéro de téléphone est installée</string>
-    <string name="email_error">Aucune application email installée</string>
+    <string name="contact_social_network">Social Networks</string>
+    <string name="contact_phone">Call</string>
+    <string name="phone_error">No app installed to call the phone number</string>
+    <string name="email_error">No email app installed</string>
     <string name="linkedin">LinkedIn</string>
     <string name="contact_linkedin">https://www.linkedin.com/in/vincent-prioul-3061ab63/</string>
-    <string name="contact_linkedin_image">Icône LinkedIn</string>
-    <string name="git_hub">Git Hub</string>
+    <string name="contact_linkedin_image">LinkedIn Icon</string>
+    <string name="git_hub">GitHub</string>
     <string name="contact_github">https://github.com/vprioul/</string>
-    <string name="contact_github_image">Icône Git Hub</string>
+    <string name="contact_github_image">GitHub Icon</string>
     <string name="instagram">Instagram</string>
     <string name="contact_instagram">https://www.instagram.com/vincentprioul/</string>
-    <string name="contact_instagram_image">Icône Instagram</string>
+    <string name="contact_instagram_image">Instagram Icon</string>
+
 
 </resources>

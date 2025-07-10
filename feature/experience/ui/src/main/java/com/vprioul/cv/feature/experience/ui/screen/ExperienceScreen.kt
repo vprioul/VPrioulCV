@@ -53,7 +53,7 @@ fun ExperienceScreen(
                             }
                             swipeDetected = true
                         } else if (offsetX < -100f && !swipeDetected) {
-                            if (listExp.size > uiState.selectedExperience) {
+                            if (listExp.size - 1 > uiState.selectedExperience) {
                                 viewModel.onExperienceSelected(uiState.selectedExperience + 1)
                             }
                             swipeDetected = true
@@ -83,7 +83,7 @@ fun ExperienceScreen(
                 )
             }
         )
-        if (listExp.isNotEmpty()) {
+        if (listExp.isNotEmpty() && listExp.size > uiState.selectedExperience) {
             ExperienceCard(
                 experience = listExp[uiState.selectedExperience]
             )

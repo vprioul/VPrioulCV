@@ -18,7 +18,7 @@
         tools:targetApi="31" >
         <activity android:name="com.vprioul.cv.screen.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.TemplateVP">
+            android:theme="@style/Theme.TemplateVP" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

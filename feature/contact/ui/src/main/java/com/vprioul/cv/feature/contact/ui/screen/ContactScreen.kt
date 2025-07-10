@@ -49,7 +49,10 @@ fun ContactScreen(
         verticalArrangement = Arrangement.spacedBy(DpLarge)
     ) {
         // Social Networks
-        AppReference(uiState.socialNetworks.toImmutableList())
+        AppReference(
+            references = uiState.socialNetworks.toImmutableList(),
+            horizontalPadding = DpMedium
+        )
 
         MinimalIconButton(
             text = stringResource(R.string.contact_phone),
