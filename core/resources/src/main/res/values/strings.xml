@@ -279,6 +279,7 @@
     <string name="hobbies_sports_swim_bio">Pratiquer lorsque j’étais jeune en compétition à la piscine de Villejean. De temps en temps dans les piscines Rennaises.</string>
     <string name="hobbies_sports_squash">Squash</string>
     <string name="hobbies_sports_squash_bio">Pratiquer en squash entreprise avec Aviwest</string>
+
     <string name="hobbies_travel_iceland">Islande</string>
     <string name="hobbies_travel_seychelles">Seychelles</string>
     <string name="hobbies_travel_thailand">Thaïlande - Cambodge</string>
@@ -288,18 +289,25 @@
     <string name="hobbies_travel_martinique">Martinique</string>
     <string name="hobbies_travel_sweden">Suède Tournoi de foot Gothia Cup</string>
     <string name="hobbies_travel_croatia">Croatie</string>
-    <string name="hobbies_travel_spain">Espagne - Portugal</string>
-    <string name="hobbies_travel_italia">Italie</string>
-    <string name="hobbies_travel_switzerland">Annecy - Genève</string>
+    <string name="hobbies_travel_spain_portugal">Espagne - Portugal</string>
+    <string name="hobbies_travel_spain">Barcelone</string>
+    <string name="hobbies_travel_portugal">Sud du Portugal</string>
+    <string name="hobbies_travel_sicile">Italie (Sicile - Rome)</string>
+    <string name="hobbies_travel_italia">Italie (Turin - Gênes - Pise)</string>
     <string name="hobbies_travel_belgium">Belgique - Pays Bas - Strasbourg - Allemagne</string>
     <string name="hobbies_travel_malta">Malte</string>
-    <string name="hobbies_travel_hungary">Hongrie</string>
-    <string name="hobbies_travel_nederland">Pays-Bas</string>
+    <string name="hobbies_travel_hungary">Budapest</string>
+    <string name="hobbies_travel_nederland">Amsterdam</string>
     <string name="hobbies_travel_england">Angleterre</string>
-    <string name="hobbies_travel_portugal">Portugal</string>
-    <string name="hobbies_travel_usa">États-Unis</string>
+    <string name="hobbies_travel_usa">États-Unis côte Est</string>
     <string name="hobbies_travel_marocco">Maroc</string>
-    <string name="hobbies_travel_french">France</string>
+    <string name="hobbies_travel_switzerland">Annecy - Genève</string>
+    <string name="hobbies_travel_lille">Lille - Bruges</string>
+    <string name="hobbies_travel_corse">Corse</string>
+    <string name="hobbies_travel_strabourg">Strasbourg</string>
+    <string name="hobbies_travel_lyon">Lyon salon Sirha</string>
+    <string name="hobbies_travel_surf">France - Surf</string>
+    <string name="hobbies_travel_ski">France - Sport d’hiver</string>
     <string name="hobbies_travel_autria">République Tchèque - Autriche - Slovaquie</string>
 
     <!-- Contact -->

@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 data class ExperienceUiState(
     val experiences: Flow<List<ExperienceData>> = emptyFlow(),
-    val selectedExperience: ExperienceData? = null
+    val selectedExperience: Int = 0
 )
 
 @HiltViewModel
@@ -29,10 +29,10 @@ class ExperienceViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(experiences = getExperiencesUseCase.invoke())
     }
 
-    fun onExperienceSelected(experience: ExperienceData) {
+    fun onExperienceSelected(index: Int) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(
-                selectedExperience = experience
+                selectedExperience = index
             )
         }
     }

@@ -82,7 +82,7 @@ object ResourcesHelper {
         "ic_cambodia" to R.drawable.ic_cambodia
     )
 
-    fun getDrawableSkillIdByName(name: String): Int {
+    fun getDrawableSkillIdByName(name: String?): Int {
         return skillIconMap[name] ?: R.drawable.ic_default_image
     }
 
@@ -103,15 +103,32 @@ object ResourcesHelper {
         "ic_ithylo" to R.drawable.ic_ithylo,
     )
 
-    fun getDrawableAppIdByName(name: String): Int {
+    fun getDrawableAppIdByName(name: String?): Int {
         return appIconMap[name] ?: R.drawable.ic_default_image
+    }
+
+    private val sportIconMap = mapOf(
+        "ic_football" to R.drawable.ic_football,
+        "ic_running" to R.drawable.ic_running,
+        "ic_diving" to R.drawable.ic_diving,
+        "ic_padel" to R.drawable.ic_padel,
+        "ic_surf" to R.drawable.ic_surf,
+        "ic_bike" to R.drawable.ic_bike,
+        "ic_swimming" to R.drawable.ic_swimming,
+        "ic_ski" to R.drawable.ic_ski,
+        "ic_wakeboard" to R.drawable.ic_wakeboard,
+        "ic_squash" to R.drawable.ic_squash,
+    )
+
+    fun getDrawableSportIdByName(name: String?): Int {
+        return sportIconMap[name] ?: R.drawable.ic_default_image
     }
 
     fun Context.getStringIdByName(name: String): Int {
         return resources.getIdentifier(name, "drawable", packageName)
     }
 
-    val experienceStringMap = mapOf(
+    private val experienceStringMap = mapOf(
         "experience_exomind_duration" to R.string.experience_exomind_duration,
         "experience_exomind_title" to R.string.experience_exomind_title,
         "experience_exomind_short_description" to R.string.experience_exomind_short_description,
@@ -132,10 +149,78 @@ object ResourcesHelper {
         "experience_ovianet_short_description" to R.string.experience_ovianet_short_description,
         "experience_ovianet_description" to R.string.experience_ovianet_description,
     )
-    fun getStringExpIdByName(name: String): Int {
+    fun getStringExpIdByName(name: String?): Int {
         return experienceStringMap[name] ?: R.string.error
     }
-    fun getStringIdByName(name: String): Int {
-        return experienceStringMap[name] ?: R.string.error
+
+    private val sportStringMap = mapOf(
+        "hobbies_sports_foot" to R.string.hobbies_sports_foot,
+        "hobbies_sports_foot_bio" to R.string.hobbies_sports_foot_bio,
+
+        "hobbies_sports_run" to R.string.hobbies_sports_run,
+        "hobbies_sports_run_bio" to R.string.hobbies_sports_run_bio,
+
+        "hobbies_sports_dive" to R.string.hobbies_sports_dive,
+        "hobbies_sports_dive_bio" to R.string.hobbies_sports_dive_bio,
+
+        "hobbies_sports_padel" to R.string.hobbies_sports_padel,
+        "hobbies_sports_padel_bio" to R.string.hobbies_sports_padel_bio,
+
+        "hobbies_sports_surf" to R.string.hobbies_sports_surf,
+        "hobbies_sports_surf_bio" to R.string.hobbies_sports_surf_bio,
+
+        "hobbies_sports_bike" to R.string.hobbies_sports_bike,
+        "hobbies_sports_bike_bio" to R.string.hobbies_sports_bike_bio,
+
+        "hobbies_sports_swim" to R.string.hobbies_sports_swim,
+        "hobbies_sports_swim_bio" to R.string.hobbies_sports_swim_bio,
+
+        "hobbies_sports_ski" to R.string.hobbies_sports_ski,
+        "hobbies_sports_ski_bio" to R.string.hobbies_sports_ski_bio,
+
+        "hobbies_sports_wake" to R.string.hobbies_sports_wake,
+        "hobbies_sports_wake_bio" to R.string.hobbies_sports_wake_bio,
+
+        "hobbies_sports_squash" to R.string.hobbies_sports_squash,
+        "hobbies_sports_squash_bio" to R.string.hobbies_sports_squash_bio,
+    )
+    fun getStringSportIdByName(name: String?): Int {
+        return sportStringMap[name] ?: R.string.error
+    }
+
+    private val travelsStringMap = mapOf(
+        "hobbies_travel_iceland" to R.string.hobbies_travel_iceland,
+        "hobbies_travel_seychelles" to R.string.hobbies_travel_seychelles,
+        "hobbies_travel_thailand" to R.string.hobbies_travel_thailand,
+        "hobbies_travel_malaisian" to R.string.hobbies_travel_malaisian,
+        "hobbies_travel_reunion" to R.string.hobbies_travel_reunion,
+        "hobbies_travel_guadeloupe" to R.string.hobbies_travel_guadeloupe,
+        "hobbies_travel_martinique" to R.string.hobbies_travel_martinique,
+        "hobbies_travel_sweden" to R.string.hobbies_travel_sweden,
+        "hobbies_travel_croatia" to R.string.hobbies_travel_croatia,
+        "hobbies_travel_spain_portugal" to R.string.hobbies_travel_spain_portugal,
+        "hobbies_travel_spain" to R.string.hobbies_travel_spain,
+        "hobbies_travel_portugal" to R.string.hobbies_travel_portugal,
+        "hobbies_travel_sicile" to R.string.hobbies_travel_sicile,
+        "hobbies_travel_italia" to R.string.hobbies_travel_italia,
+        "hobbies_travel_belgium" to R.string.hobbies_travel_belgium,
+        "hobbies_travel_malta" to R.string.hobbies_travel_malta,
+        "hobbies_travel_hungary" to R.string.hobbies_travel_hungary,
+        "hobbies_travel_nederland" to R.string.hobbies_travel_nederland,
+        "hobbies_travel_england" to R.string.hobbies_travel_england,
+        "hobbies_travel_usa" to R.string.hobbies_travel_usa,
+        "hobbies_travel_marocco" to R.string.hobbies_travel_marocco,
+        "hobbies_travel_switzerland" to R.string.hobbies_travel_switzerland,
+        "hobbies_travel_lille" to R.string.hobbies_travel_lille,
+        "hobbies_travel_corse" to R.string.hobbies_travel_corse,
+        "hobbies_travel_strabourg" to R.string.hobbies_travel_strabourg,
+        "hobbies_travel_lyon" to R.string.hobbies_travel_lyon,
+        "hobbies_travel_surf" to R.string.hobbies_travel_surf,
+        "hobbies_travel_ski" to R.string.hobbies_travel_ski,
+        "hobbies_travel_autria" to R.string.hobbies_travel_autria,
+    )
+
+    fun getStringTravelIdByName(name: String?): Int {
+        return travelsStringMap[name] ?: R.string.error
     }
 }

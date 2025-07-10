@@ -39,14 +39,20 @@ fun <T> ColumnScope.IconCarousel(
     itemWidth: Dp = DpApp,
     itemHeight: Dp = DpApp,
     spacing: Dp = DpLarge,
+    scrollToIndex: Int = 0,
     selectedItemContent: (T) -> Unit = {},
-    itemContent: @Composable (item: T, isSelected: Boolean) -> Unit
+    itemContent: @Composable (item: T, isSelected: Boolean, modifier: Modifier) -> Unit
 ) {
     val listState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
 
-    val screenWidth = LocalConfiguration.current.screenWidthDp.dp
+    LaunchedEffect(scrollToIndex) {
+        coroutineScope.launch {
+            listState.animateScrollToItem(scrollToIndex)
+        }
+    }
 
+    val screenWidth = LocalConfiguration.current.screenWidthDp.dp
     val horizontalContentPadding = (screenWidth - itemWidth) / 2
 
     val centeredIndex by remember {
@@ -106,7 +112,13 @@ fun <T> ColumnScope.IconCarousel(
                         }
                     }
             ) {
-                itemContent(item, isSelected)
+                val modifierItem = Modifier
+                    .clickable {
+                        coroutineScope.launch {
+                            listState.animateScrollToItem(index)
+                        }
+                    }
+                itemContent(item, isSelected, modifierItem)
             }
         }
     }

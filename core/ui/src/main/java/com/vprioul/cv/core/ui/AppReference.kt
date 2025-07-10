@@ -15,10 +15,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.core.net.toUri
 import com.vprioul.cv.core.designsystem.theme.DpIcon
 import com.vprioul.cv.core.domain.model.ReferenceData
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun AppReference(
-    references: List<ReferenceData>,
+    references: ImmutableList<ReferenceData>,
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current

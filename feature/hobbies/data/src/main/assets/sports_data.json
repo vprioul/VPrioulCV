@@ -1,0 +1,52 @@
+[
+  {
+    "name": "hobbies_sports_foot",
+    "icon": "ic_football",
+    "bio": "hobbies_sports_foot_bio"
+  },
+  {
+    "name": "hobbies_sports_run",
+    "icon": "ic_running",
+    "bio": "hobbies_sports_run_bio"
+  },
+  {
+    "name": "hobbies_sports_dive",
+    "icon": "ic_diving",
+    "bio": "hobbies_sports_dive_bio"
+  },
+  {
+    "name": "hobbies_sports_padel",
+    "icon": "ic_padel",
+    "bio": "hobbies_sports_padel_bio"
+  },
+  {
+    "name": "hobbies_sports_surf",
+    "icon": "ic_surf",
+    "bio": "hobbies_sports_surf_bio"
+  },
+  {
+    "name": "hobbies_sports_bike",
+    "icon": "ic_bike",
+    "bio": "hobbies_sports_bike_bio"
+  },
+  {
+    "name": "hobbies_sports_swim",
+    "icon": "ic_swimming",
+    "bio": "hobbies_sports_swim_bio"
+  },
+  {
+    "name": "hobbies_sports_ski",
+    "icon": "ic_ski",
+    "bio": "hobbies_sports_ski_bio"
+  },
+  {
+    "name": "hobbies_sports_wake",
+    "icon": "ic_wakeboard",
+    "bio": "hobbies_sports_wake_bio"
+  },
+  {
+    "name": "hobbies_sports_squash",
+    "icon": "ic_squash",
+    "bio": "hobbies_sports_squash_bio"
+  }
+]

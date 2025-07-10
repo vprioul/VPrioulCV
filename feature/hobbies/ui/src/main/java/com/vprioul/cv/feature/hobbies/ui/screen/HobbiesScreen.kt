@@ -25,6 +25,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
 import com.google.maps.android.compose.CameraPositionState
 import com.google.maps.android.compose.GoogleMap
 import com.google.maps.android.compose.Marker
@@ -38,7 +39,8 @@ import com.vprioul.cv.core.designsystem.theme.DpLarge
 import com.vprioul.cv.core.designsystem.theme.DpMedium
 import com.vprioul.cv.core.designsystem.theme.DpNormal
 import com.vprioul.cv.core.resources.R
-import com.vprioul.cv.feature.hobbies.domain.model.Sport
+import com.vprioul.cv.core.ui.ResourcesHelper
+import com.vprioul.cv.feature.hobbies.data.model.Sport
 import com.vprioul.cv.feature.hobbies.ui.viewmodel.HobbiesUiState
 import com.vprioul.cv.feature.hobbies.ui.viewmodel.HobbiesViewModel
 import kotlinx.collections.immutable.toImmutableList
@@ -55,15 +57,20 @@ fun HobbiesScreen(
             2f
         )
     }
-    LaunchedEffect(uiState.selectedRoadTrip?.listCityData?.first()?.location) {
+    LaunchedEffect(uiState.selectedRoadTrip?.cities?.first()) {
         uiState.selectedRoadTrip?.let { country ->
-            if (country.listCityData.isNotEmpty()) {
+            if (country.cities.size > 1) {
+                val boundsBuilder = LatLngBounds.builder()
+                country.cities.forEach { boundsBuilder.include(LatLng(it.lat, it.lng)) }
+                val bounds = boundsBuilder.build()
                 cameraPositionState.animate(
-                    update = CameraUpdateFactory.newLatLngZoom(
-                        country.listCityData.first().location,
-                        9f
-                    ),
+                    update = CameraUpdateFactory.newLatLngBounds(bounds, 100),
                     durationMs = 1000
+                )
+            } else if (country.cities.isNotEmpty()) {
+                CameraPosition.fromLatLngZoom(
+                    LatLng(country.cities.first().lat, country.cities.first().lng),
+                    10f
                 )
             }
         }
@@ -108,11 +115,11 @@ fun ColumnScope.SportCarousel(
         selectedItemContent = { sport ->
             onSportSelected(sport)
         }
-    ) { sport, _ ->
+    ) { sport, _, modifierItem ->
         Image(
-            painter = painterResource(id = sport.icon),
-            contentDescription = stringResource(sport.name),
-            modifier = Modifier.size(DpIcon),
+            painter = painterResource(id = ResourcesHelper.getDrawableSportIdByName(sport.icon)),
+            contentDescription = stringResource(ResourcesHelper.getStringSportIdByName(sport.name)),
+            modifier = modifierItem.size(DpIcon),
         )
     }
     uiState.selectedSport?.let { sport ->
@@ -120,14 +127,14 @@ fun ColumnScope.SportCarousel(
             modifier = Modifier
                 .padding(horizontal = DpLarge, vertical = DpNormal)
                 .align(Alignment.CenterHorizontally),
-            label = stringResource(sport.name),
+            label = stringResource(ResourcesHelper.getStringSportIdByName(sport.name)),
             style = MaterialTheme.typography.titleMedium
         )
         MinimalText(
             modifier = Modifier
                 .padding(horizontal = DpLarge, vertical = DpNormal)
                 .align(Alignment.CenterHorizontally),
-            label = stringResource(sport.description),
+            label = stringResource(ResourcesHelper.getStringSportIdByName(sport.bio)),
             style = MaterialTheme.typography.bodySmall
         )
     }
@@ -153,7 +160,7 @@ fun ColumnScope.TravelMap(
             modifier = Modifier
                 .padding(all = DpNormal)
                 .align(Alignment.CenterHorizontally),
-            label = "${stringResource(roadtrip.name)} - ${roadtrip.year}",
+            label = "${stringResource(ResourcesHelper.getStringTravelIdByName(roadtrip.name))} - ${roadtrip.year}",
             style = MaterialTheme.typography.titleMedium,
         )
     }
@@ -168,13 +175,13 @@ fun ColumnScope.TravelMap(
             cameraPositionState = cameraPositionState
         ) {
             uiState.selectedRoadTrip?.let { roadtrip ->
-                val route: List<LatLng> = roadtrip.listCityData.map { it.location }
-                roadtrip.listCityData.forEach { place ->
+                val route: List<LatLng> = roadtrip.cities.map { LatLng(it.lat, it.lng) }
+                roadtrip.cities.forEach { place ->
                     Marker(
                         state = MarkerState(
                             position = LatLng(
-                                place.location.latitude,
-                                place.location.longitude
+                                place.lat,
+                                place.lng
                             )
                         ),
                         title = place.name

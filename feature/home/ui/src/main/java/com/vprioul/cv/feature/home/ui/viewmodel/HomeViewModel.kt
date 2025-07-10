@@ -33,7 +33,9 @@ class HomeViewModel @Inject constructor(
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
 
     init {
-        _uiState.value = _uiState.value.copy(references = getReferencesUseCase.invoke(ReferenceSource.Home))
+        _uiState.value = _uiState.value.copy(
+            references = getReferencesUseCase.invoke(ReferenceSource.Home)
+        )
     }
 
     fun onOpenUrlClick(context: Context, url: String) {

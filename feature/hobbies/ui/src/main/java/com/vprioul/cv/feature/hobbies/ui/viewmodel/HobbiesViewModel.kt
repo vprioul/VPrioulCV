@@ -2,10 +2,9 @@ package com.vprioul.cv.feature.hobbies.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vprioul.cv.feature.hobbies.domain.data.SportData
-import com.vprioul.cv.feature.hobbies.domain.data.TravelData
-import com.vprioul.cv.feature.hobbies.domain.model.Sport
-import com.vprioul.cv.feature.hobbies.domain.model.Travel
+import com.vprioul.cv.feature.hobbies.data.model.Sport
+import com.vprioul.cv.feature.hobbies.data.model.Travel
+import com.vprioul.cv.feature.hobbies.data.repository.HobbyRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -14,19 +13,25 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 data class HobbiesUiState(
-    val sports: List<Sport> = SportData.sports,
-    val roadTrips: List<Travel> = TravelData.travels,
+    val sports: List<Sport> = emptyList(),
+    val roadTrips: List<Travel> = emptyList(),
     val selectedSport: Sport? = null,
     val selectedRoadTrip: Travel? = null,
     val countRoadTrip: Int = 0
 )
 
 @HiltViewModel
-class HobbiesViewModel @Inject constructor() : ViewModel() {
+class HobbiesViewModel @Inject constructor(
+    private val hobbyRepository: HobbyRepository
+) : ViewModel() {
     private val _uiState = MutableStateFlow(HobbiesUiState())
     val uiState: StateFlow<HobbiesUiState> = _uiState.asStateFlow()
 
     init {
+        _uiState.value = _uiState.value.copy(
+            sports = hobbyRepository.getSports(),
+            roadTrips = hobbyRepository.getTravels()
+        )
         if (uiState.value.sports.isNotEmpty()) {
             onSportSelected(uiState.value.sports[0])
         }

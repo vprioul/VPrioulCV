@@ -17,7 +17,7 @@ object ReferenceModuleDi {
         @ApplicationContext context: Context
     ): LocalJsonReferenceDataSource = LocalJsonReferenceDataSource(context)
 
-    /*@Provides
+    /* //@Provides
     fun provideReferenceRepository(
         dataSource: LocalJsonReferenceDataSource
     ): ReferenceRepository = ReferenceRepositoryImpl(dataSource)*/

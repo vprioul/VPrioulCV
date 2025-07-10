@@ -7,4 +7,5 @@ android {
 }
 
 dependencies {
+    implementation(libs.play.services.maps)
 }

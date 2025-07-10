@@ -1,7 +1,6 @@
-package com.vprioul.cv.core.data.di
+package com.vprioul.cv.feature.experience.data.di
 
 import android.content.Context
-import com.vprioul.cv.core.domain.repository.ReferenceRepository
 import com.vprioul.cv.feature.experience.data.repository.ExperienceRepositoryImpl
 import com.vprioul.cv.feature.experience.data.datasource.LocalJsonExperienceDataSource
 import com.vprioul.cv.feature.experience.domain.repository.ExperienceRepository
