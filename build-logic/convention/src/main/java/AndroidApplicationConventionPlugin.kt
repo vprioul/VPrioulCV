@@ -18,7 +18,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 buildFeatures {
                     buildConfig = true
                 }
-                namespace = "com.vprioul.cv.TemplateVP"
+                namespace = "com.vprioul.cv.VPrioulCV"
 
                 defaultConfig.targetSdk = 35
                 compileSdk = 35
@@ -26,7 +26,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 testOptions.animationsDisabled = true
                 defaultConfig {
                     minSdk = 24
-                    applicationId = "com.vprioul.cv.TemplateVP"
+                    applicationId = "com.vprioul.cv.VPrioulCV"
                     targetSdk = 35
                     versionCode = 1
                     versionName = "1.0"

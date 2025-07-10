@@ -1,6 +1,7 @@
 package com.vprioul.cv.screen
 
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -28,6 +29,7 @@ fun MainScreen(
     modifier.padding(DpMedium)
     val navController = rememberNavController()
     Scaffold(
+        modifier = Modifier.statusBarsPadding(),
         bottomBar = {
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val destination = navBackStackEntry?.destination

@@ -1,7 +1,7 @@
 package com.vprioul.cv
 
 import android.app.Application
-import com.vprioul.cv.TemplateVP.BuildConfig
+import com.vprioul.cv.VPrioulCV.BuildConfig
 import timber.log.Timber
 
 import dagger.hilt.android.HiltAndroidApp
